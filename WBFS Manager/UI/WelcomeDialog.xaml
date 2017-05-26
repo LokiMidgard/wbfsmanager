@@ -1,0 +1,16 @@
+﻿<Window x:Uid="Window_1" x:Class="WBFSManager.UI.WelcomeDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         Icon="../Content/WBFSManagerNew.png"
+    Title="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=WelcomeText}" Height="311" Width="452" ResizeMode="NoResize" SizeToContent="Height" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" SnapsToDevicePixels="True">
+    <StackPanel x:Uid="StackPanel_1" Orientation="Vertical" Margin="15,15,15,0">
+        <TextBlock x:Uid="TextBlock_1" TextWrapping="Wrap" TextAlignment="Center" FontSize="15" Text="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=WelcomeText}"></TextBlock>
+        <TextBlock x:Uid="TextBlock_2" TextWrapping="Wrap" TextAlignment="Center" Margin="0,0,0,3" Text="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=InstructionsText}"></TextBlock>
+        <TextBlock x:Uid="TextBlock_3" TextWrapping="Wrap" TextAlignment="Justify" Margin="0,0,0,3" Text="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=Instructions1Text}"></TextBlock>
+        <TextBlock x:Uid="TextBlock_4" TextWrapping="Wrap" TextAlignment="Justify" Margin="0,0,0,3" Text="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=Instructions2Text}"></TextBlock>
+        <TextBlock x:Uid="TextBlock_5" TextWrapping="Wrap" TextAlignment="Justify" Margin="0,0,0,3" Text="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=InstructionsAddText}"></TextBlock>
+        <TextBlock x:Uid="TextBlock_6" TextWrapping="Wrap" TextAlignment="Justify" Margin="0,0,0,3" Text="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=InstructionsExtrText}"></TextBlock>
+        <TextBlock x:Uid="TextBlock_7" TextWrapping="Wrap" TextAlignment="Justify" Margin="0,0,0,3" Text="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=InstructionsEndText}"></TextBlock>
+        <Button x:Uid="Button_1" HorizontalAlignment="Center" Width="100" Margin="5" IsDefault="True" IsCancel="True" Content="{Resx ResxName=WBFSManager.UI.Localization.WelcomeDialog.WelcomeDialogR, Key=OkButtonText}"></Button>
+    </StackPanel>
+</Window>

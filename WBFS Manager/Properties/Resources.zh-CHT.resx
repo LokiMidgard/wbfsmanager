@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CompletedAddingShortStr" xml:space="preserve">
+    <value>加入完成</value>
+  </data>
+  <data name="CompletedAddingStr" xml:space="preserve">
+    <value>加入遊戲於WBFS磁碟完成.</value>
+  </data>
+  <data name="CompletedExtractShortStr" xml:space="preserve">
+    <value>擷取完成</value>
+  </data>
+  <data name="CompletedExtractStr" xml:space="preserve">
+    <value>從WBFS磁碟擷取完成.</value>
+  </data>
+  <data name="ConfirmDeleteShortStr" xml:space="preserve">
+    <value>删除？</value>
+  </data>
+  <data name="ConfirmDeleteStr" xml:space="preserve">
+    <value>您确定要删除</value>
+  </data>
+  <data name="CopyProgressStr" xml:space="preserve">
+    <value>複製進行中</value>
+  </data>
+  <data name="DownloadFromWebPromptShortText" xml:space="preserve">
+    <value>下載封面?</value>
+  </data>
+  <data name="DownloadFromWebPromptText" xml:space="preserve">
+    <value>是否要啟用從網路下載封面? (你稍後可以從編輯功能選單變更這個設定.)</value>
+  </data>
+  <data name="ErrorAddExistsStr" xml:space="preserve">
+    <value>.這個遊戲已經存在於WBFS磁碟.</value>
+  </data>
+  <data name="ErrorAddingNoDriveShortStr" xml:space="preserve">
+    <value>新增遊戲錯誤.</value>
+  </data>
+  <data name="ErrorAddingNoDriveStr" xml:space="preserve">
+    <value>新增遊戲至WBFS磁碟發生錯誤. 無法存取磁碟.</value>
+  </data>
+  <data name="ErrorAddingShortStr" xml:space="preserve">
+    <value>讀取檔案錯誤</value>
+  </data>
+  <data name="ErrorAddingStr" xml:space="preserve">
+    <value>加入遊戲發生錯誤. 請嘗試較少的資料夾結構.</value>
+  </data>
+  <data name="ErrorAddLoadingStr" xml:space="preserve">
+    <value>.載入WBFS磁碟發生錯誤.</value>
+  </data>
+  <data name="ErrorAddReadStr" xml:space="preserve">
+    <value>.嘗試從磁碟讀取映像檔時發生錯誤.</value>
+  </data>
+  <data name="ErrorCreatingHBCShortStr" xml:space="preserve">
+    <value>建立HBC捷徑錯誤.</value>
+  </data>
+  <data name="ErrorCreatingHBCStr" xml:space="preserve">
+    <value>建立HBC捷徑錯誤. dol檔不存在.</value>
+  </data>
+  <data name="ErrorDeleteNotFoundStr" xml:space="preserve">
+    <value>WBFS磁碟中找不到遊戲.</value>
+  </data>
+  <data name="ErrorDeleteShortStr" xml:space="preserve">
+    <value>移除遊戲錯誤</value>
+  </data>
+  <data name="ErrorDeleteStr" xml:space="preserve">
+    <value>移除遊戲發生錯誤:</value>
+  </data>
+  <data name="ErrorEstimateLoadingDriveStr" xml:space="preserve">
+    <value>載入WBFS磁碟發生錯誤.</value>
+  </data>
+  <data name="ErrorEstimateReadingImageStr" xml:space="preserve">
+    <value>嘗試從磁碟讀取映像檔時發生錯誤.</value>
+  </data>
+  <data name="ErrorEstimatingShortStr" xml:space="preserve">
+    <value>估計遊戲大小發生錯誤.</value>
+  </data>
+  <data name="ErrorEstimatingStr" xml:space="preserve">
+    <value>估計錯誤:</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesShortStr" xml:space="preserve">
+    <value>項目不存在.</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesStr" xml:space="preserve">
+    <value>項目不存在以擷取出ISO.</value>
+  </data>
+  <data name="ErrorExtractingP1ShortStr" xml:space="preserve">
+    <value>擷取遊戲錯誤.</value>
+  </data>
+  <data name="ErrorExtractingP1Str" xml:space="preserve">
+    <value>擷取中發生錯誤.</value>
+  </data>
+  <data name="ErrorExtractingShortStr" xml:space="preserve">
+    <value>擷取遊戲錯誤.</value>
+  </data>
+  <data name="ErrorExtractingStr" xml:space="preserve">
+    <value>擷取遊戲時發生錯誤. 無法存取磁碟.</value>
+  </data>
+  <data name="ErrorExtrLoadingStr" xml:space="preserve">
+    <value>.讀取WBFS磁碟發生錯誤.</value>
+  </data>
+  <data name="ErrorExtrNoDriveStr" xml:space="preserve">
+    <value>.WBFS磁碟無法開啟檔案寫入.</value>
+  </data>
+  <data name="ErrorExtrNoGameStr" xml:space="preserve">
+    <value>.WBFS磁碟找不到這遊戲.</value>
+  </data>
+  <data name="ErrorFormatInvalidShortStr" xml:space="preserve">
+    <value>無效的磁碟代號.</value>
+  </data>
+  <data name="ErrorFormatInvalidStr" xml:space="preserve">
+    <value>選取格式化的磁碟代號無效.</value>
+  </data>
+  <data name="ErrorFormatShortStr" xml:space="preserve">
+    <value>格式化錯誤</value>
+  </data>
+  <data name="ErrorFormatStr" xml:space="preserve">
+    <value>格式化硬碟時發生錯誤.</value>
+  </data>
+  <data name="ErrorLoadingDriveShortStr" xml:space="preserve">
+    <value>載入磁碟錯誤</value>
+  </data>
+  <data name="ErrorLoadingDriveStr" xml:space="preserve">
+    <value>載入磁碟錯誤. 請確認磁碟不在使用中並且為WBFS之格式.</value>
+  </data>
+  <data name="ErrorReadingDriveStatsShortStr" xml:space="preserve">
+    <value>讀取磁碟統計資料錯誤.</value>
+  </data>
+  <data name="ErrorReadingDriveStatsStr" xml:space="preserve">
+    <value>讀取磁碟統計資料錯誤. 無法存取磁碟.</value>
+  </data>
+  <data name="ErrorReadingISOShortStr" xml:space="preserve">
+    <value>讀取ISO訊息時錯誤.</value>
+  </data>
+  <data name="ErrorReadingISOStr" xml:space="preserve">
+    <value>讀取ISO訊息時錯誤. 無法存取磁碟.</value>
+  </data>
+  <data name="ErrorRenameCantLoadStr" xml:space="preserve">
+    <value>無法載入遊戲.</value>
+  </data>
+  <data name="ErrorRenameInvalidShortStr" xml:space="preserve">
+    <value>無效的名稱.</value>
+  </data>
+  <data name="ErrorRenameInvalidStr" xml:space="preserve">
+    <value>無效的指定名稱. 名稱長度須介於0到57個字元.</value>
+  </data>
+  <data name="ErrorRenameShortStr" xml:space="preserve">
+    <value>遊戲更名錯誤</value>
+  </data>
+  <data name="ErrorRenameStr" xml:space="preserve">
+    <value>遊戲更名時發生錯誤.</value>
+  </data>
+  <data name="ErrorWhileAddingShortStr" xml:space="preserve">
+    <value>加入遊戲錯誤.</value>
+  </data>
+  <data name="ErrorWhileAddingStr" xml:space="preserve">
+    <value>加入時發生錯誤:</value>
+  </data>
+  <data name="ExtractionProgressStr" xml:space="preserve">
+    <value>擷取程序</value>
+  </data>
+  <data name="FormatWarningP1Str" xml:space="preserve">
+    <value>警告: 將會刪除選取分割區之所有檔案(</value>
+  </data>
+  <data name="FormatWarningP2Str" xml:space="preserve">
+    <value>). 資料無法修復. 程式開發者不承擔任何格式化意外造成的資料損失之責任. 當格式化程序未完成前不要卸載你的磁碟!
+你確定要格式化磁碟嗎</value>
+  </data>
+  <data name="FormatWarningShortStr" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="MetaXmlLongDescStr" xml:space="preserve">
+    <value>啟動WBFS遊戲載入</value>
+  </data>
+  <data name="MetaXmlShortDescStr" xml:space="preserve">
+    <value> 在USB硬碟</value>
+  </data>
+  <data name="MustSelectEntryToRemoveShortStr" xml:space="preserve">
+    <value>沒有選取項目</value>
+  </data>
+  <data name="MustSelectEntryToRemoveStr" xml:space="preserve">
+    <value>您必須選擇一個項目移除.</value>
+  </data>
+  <data name="MustSelectEntryToRenameShortStr" xml:space="preserve">
+    <value>沒有選取項目</value>
+  </data>
+  <data name="MustSelectEntryToRenameStr" xml:space="preserve">
+    <value>您必須選擇一個項目更名.</value>
+  </data>
+  <data name="MustSelectExistingFolderShortStr" xml:space="preserve">
+    <value>無效的資料夾.</value>
+  </data>
+  <data name="MustSelectExistingFolderStr" xml:space="preserve">
+    <value>你必須選取已存在的資料夾.</value>
+  </data>
+  <data name="NoDrivesDetectedShortStr" xml:space="preserve">
+    <value>沒有偵測到磁碟.</value>
+  </data>
+  <data name="NoDriveSelectedShortStr" xml:space="preserve">
+    <value>沒有選取磁碟.</value>
+  </data>
+  <data name="NoDriveSelectedStr" xml:space="preserve">
+    <value>沒有可用磁碟來加入遊戲.</value>
+  </data>
+  <data name="NoIsoSelectedToAddShortStr" xml:space="preserve">
+    <value>沒有選取ISOs.</value>
+  </data>
+  <data name="NoIsoSelectedToAddStr" xml:space="preserve">
+    <value>沒有選取ISOs加入, 請使用瀏覽鍵選取ISOs加入列表.</value>
+  </data>
+  <data name="SelectCoversDirStr" xml:space="preserve">
+    <value>選擇封面的路徑為:</value>
+  </data>
+  <data name="SelectDirForHBCStr" xml:space="preserve">
+    <value>選擇一個路徑儲存為:</value>
+  </data>
+  <data name="SelectImageToAddStr" xml:space="preserve">
+    <value>選擇一個映像檔加入:</value>
+  </data>
+  <data name="SelectLocationExtractStr" xml:space="preserve">
+    <value>選擇一個路徑來儲存ISO映像檔為:</value>
+  </data>
+  <data name="UnableToDetectDrivesStr" xml:space="preserve">
+    <value>未偵測到任何磁碟機. 關閉WBFS Manager.</value>
+  </data>
+  <data name="ChooseTempFolderText" xml:space="preserve">
+    <value>選擇一個暫存資料夾:</value>
+  </data>
+  <data name="DriveToDriveProgressStr" xml:space="preserve">
+    <value>磁碟對磁碟傳輸進度</value>
+  </data>
+  <data name="ErrorExtractingRARShortStr" xml:space="preserve">
+    <value>RAR解壓縮錯誤</value>
+  </data>
+  <data name="ErrorFollowingWhileTransStr" xml:space="preserve">
+    <value>傳書中發生以下錯誤:</value>
+  </data>
+  <data name="ErrorInvalidFolderShortStr" xml:space="preserve">
+    <value>無效的資料夾</value>
+  </data>
+  <data name="ErrorInvalidFolderStr" xml:space="preserve">
+    <value>選取了無效的資料夾, 請選擇另一個資料夾.</value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceDriveStr" xml:space="preserve">
+    <value>沒有項目存在於來源磁碟中.</value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceNonSelectedStr" xml:space="preserve">
+    <value>沒有項目存在於來源磁碟或沒有項目被選中.</value>
+  </data>
+  <data name="ErrorNoSecondaryDriveLoadedStr" xml:space="preserve">
+    <value>沒有載入第二個磁碟來複製遊戲.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceLowerStr" xml:space="preserve">
+    <value>, 空間不足.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceShortStr" xml:space="preserve">
+    <value>空間不足</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceTempFolderStr" xml:space="preserve">
+    <value>暫存資料夾空間不足, 選擇另一個可用空間大於4.8GB的暫存資料夾.</value>
+  </data>
+  <data name="ErrorOccuredExtractingStr" xml:space="preserve">
+    <value>擷取遊戲時發生錯誤. 將滑鼠移動到每個遊戲的錯誤圖示點選下一步讀取錯誤訊息.</value>
+  </data>
+  <data name="ErrorOccuredWhileTransShortStr" xml:space="preserve">
+    <value>傳輸錯誤</value>
+  </data>
+  <data name="ErrorOccuredWhileTransStr" xml:space="preserve">
+    <value>傳輸中發生錯誤:</value>
+  </data>
+  <data name="ErrorRARMissingVolP1Str" xml:space="preserve">
+    <value>遺失標籤:</value>
+  </data>
+  <data name="ErrorRarMissingVolP2Str" xml:space="preserve">
+    <value> 選擇一個RAR壓縮內容之檔案:</value>
+  </data>
+  <data name="ErrorRarMissingVolShortStr" xml:space="preserve">
+    <value>遺失標籤</value>
+  </data>
+  <data name="ErrorRarPassReqdShortStr" xml:space="preserve">
+    <value>需要密碼</value>
+  </data>
+  <data name="ErrorRarPassReqdStr" xml:space="preserve">
+    <value>需要密碼為:</value>
+  </data>
+  <data name="ErrorReadingSomeIsosStr" xml:space="preserve">
+    <value>讀取部分ISO檔案時發生錯誤.</value>
+  </data>
+  <data name="ErrorsOccuredExtractingShortStr" xml:space="preserve">
+    <value>擷取時發生錯誤.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingShortStr" xml:space="preserve">
+    <value>加入時發生錯誤.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingStr" xml:space="preserve">
+    <value>加入遊戲時發生錯誤. 將滑鼠移動到每個遊戲的錯誤圖示點選下一步讀取錯誤訊息.</value>
+  </data>
+  <data name="ErrorsTransShortStr" xml:space="preserve">
+    <value>傳輸錯誤</value>
+  </data>
+  <data name="FormatSuccessfulShortStr" xml:space="preserve">
+    <value>格式化成功</value>
+  </data>
+  <data name="FormatSuccessfulStr" xml:space="preserve">
+    <value>格式化成功完成. 這個WBFS磁碟已經準備好了.</value>
+  </data>
+  <data name="InvalidTempFolderStr" xml:space="preserve">
+    <value>無效的暫存資料夾</value>
+  </data>
+  <data name="MustSelectValidFolderText" xml:space="preserve">
+    <value>必須選擇一個有效的暫存資料夾.</value>
+  </data>
+  <data name="ReadingFilesText" xml:space="preserve">
+    <value>檔案讀取中</value>
+  </data>
+  <data name="SaveGameListAsStr" xml:space="preserve">
+    <value>儲存遊戲清單如:</value>
+  </data>
+  <data name="SelectDirectoryToExtractToStr" xml:space="preserve">
+    <value>選擇一個目錄來擷取為ISO檔</value>
+  </data>
+  <data name="WarningNotEnoughSpaceTempStr" xml:space="preserve">
+    <value>選擇的暫存資料夾沒有足夠的可用空間, 如果你不選擇一個可用空間大於4.8GB的硬碟, 解壓縮RAR檔案時你可能會遇到問題.</value>
+  </data>
+  <data name="ChannCreationCompleteStr" xml:space="preserve">
+    <value>頻道製作完成.</value>
+  </data>
+  <data name="CompletedChanCreationSuccessShortStr" xml:space="preserve">
+    <value>頻道製作成功</value>
+  </data>
+  <data name="CompletedChannelCreationSuccessStr" xml:space="preserve">
+    <value>頻道製作成功完成</value>
+  </data>
+  <data name="CompletedExportingListStr" xml:space="preserve">
+    <value>輸出清單到檔案完成.</value>
+  </data>
+  <data name="CompletedHBCEntryStr" xml:space="preserve">
+    <value>完成Hombrew頻道項目製作.</value>
+  </data>
+  <data name="CompletedStr" xml:space="preserve">
+    <value>完成Hombrew頻道項目製作.</value>
+  </data>
+  <data name="CreatingChannelsProgressText" xml:space="preserve">
+    <value>製作頻道…</value>
+  </data>
+  <data name="ErrorChanIdMustBeFourStr" xml:space="preserve">
+    <value>頻道ID必須正好4個字元.</value>
+  </data>
+  <data name="ErrorCodeStr" xml:space="preserve">
+    <value> (錯誤代碼</value>
+  </data>
+  <data name="ErrorCreatinChanSingleStr" xml:space="preserve">
+    <value>製作頻道錯誤</value>
+  </data>
+  <data name="ErrorCreatingChanForStr" xml:space="preserve">
+    <value>製作頻道時發生錯誤</value>
+  </data>
+  <data name="ErrorCreatingChannelErrCodeStr" xml:space="preserve">
+    <value>製作頻道時發生錯誤. (錯誤代碼</value>
+  </data>
+  <data name="ErrorEmptyEntryListShortStr" xml:space="preserve">
+    <value>空項目清單</value>
+  </data>
+  <data name="ErrorEmptyEntryListStr" xml:space="preserve">
+    <value>製作頻道項目清單是空的.</value>
+  </data>
+  <data name="ErrorFormatClosingDriveStr" xml:space="preserve">
+    <value>試圖關閉時發生錯誤.</value>
+  </data>
+  <data name="ErrorIncorrectVersionShortStr" xml:space="preserve">
+    <value>版本不正確</value>
+  </data>
+  <data name="ErrorIncorrectVersionStr" xml:space="preserve">
+    <value>WBFS Manager版本不符合你的作業系統. 如果你使用的是64位元作業系統, 請安裝64位元版本的WBFS Manager (x64).</value>
+  </data>
+  <data name="ErrorInvalidBaseWadFilenameStr" xml:space="preserve">
+    <value>無效的基本WAD檔案名稱, 檔案不存在.</value>
+  </data>
+  <data name="ErrorInvalidChanCreationValsStr" xml:space="preserve">
+    <value>無效的頻道製作設定值.</value>
+  </data>
+  <data name="ErrorInvalidChanIdOrOutFileStr" xml:space="preserve">
+    <value>無效的頻道ID或輸出檔案名稱.</value>
+  </data>
+  <data name="ErrorInvalidChanIdStr" xml:space="preserve">
+    <value>無效的頻道ID</value>
+  </data>
+  <data name="ErrorInvalidChannelSettingsFixStr" xml:space="preserve">
+    <value>無效的頻道製作設定. 請於選項選單裡修正設定.</value>
+  </data>
+  <data name="ErrorInvalidCommonKeyFilenameStr" xml:space="preserve">
+    <value>無效的共通密鑰檔名, 檔案不存在.</value>
+  </data>
+  <data name="ErrorInvalidDolFilenameStr" xml:space="preserve">
+    <value>無效的USB Loader .dol檔名, 檔案不存在.</value>
+  </data>
+  <data name="ErrorInvalidFilename" xml:space="preserve">
+    <value>無效的檔名</value>
+  </data>
+  <data name="ErrorInvalidIsoPathForStr" xml:space="preserve">
+    <value>無效的ISO檔案路徑</value>
+  </data>
+  <data name="ErrorInvalidIsoPathShortStr" xml:space="preserve">
+    <value>無效的ISO路徑</value>
+  </data>
+  <data name="ErrorInvalidIsoPathStr" xml:space="preserve">
+    <value>無效的ISO檔案路徑.</value>
+  </data>
+  <data name="ErrorInvalidOuputWadFilenameStr" xml:space="preserve">
+    <value>無效的輸出WAD檔名.</value>
+  </data>
+  <data name="ErrorInvalidPartitionSettingStr" xml:space="preserve">
+    <value>選取了無效的硬碟分割區設定.</value>
+  </data>
+  <data name="ErrorInvalidSettingsStr" xml:space="preserve">
+    <value>無效的設定.</value>
+  </data>
+  <data name="ErrorInvalidValsShortStr" xml:space="preserve">
+    <value>值無效</value>
+  </data>
+  <data name="ErrorsCreatingChannelsStr" xml:space="preserve">
+    <value>製作頻道發生錯誤</value>
+  </data>
+  <data name="ErrorUnableToCreateDirShortStr" xml:space="preserve">
+    <value>無法建立目錄</value>
+  </data>
+  <data name="ErrorUnableToCreateTempDirStr" xml:space="preserve">
+    <value>無法建立暫存目錄:</value>
+  </data>
+  <data name="NewUpdateAvailableStr" xml:space="preserve">
+    <value>新的更新可用.</value>
+  </data>
+  <data name="NoUpdatesAvailableShortStr" xml:space="preserve">
+    <value>沒有更新可用</value>
+  </data>
+  <data name="NoUpdatesAvailableStr" xml:space="preserve">
+    <value>目前沒有更新可用.</value>
+  </data>
+  <data name="ParitionOptionRemoveUpdateStr" xml:space="preserve">
+    <value>刪除更新分割區, 休息一下吧</value>
+  </data>
+  <data name="PartitionOptionAllPartStr" xml:space="preserve">
+    <value>所有分割區</value>
+  </data>
+  <data name="PartitonOptionOnlyGameStr" xml:space="preserve">
+    <value>僅遊戲分割區</value>
+  </data>
+  <data name="ProgressCancellingText" xml:space="preserve">
+    <value>當目前項目完成後操作將會取消.</value>
+  </data>
+  <data name="SaveWadFileAsStr" xml:space="preserve">
+    <value>儲存WAD檔案如…</value>
+  </data>
+  <data name="SelectBaseWadStr" xml:space="preserve">
+    <value>選取基本WAD:</value>
+  </data>
+  <data name="SelectCommonKeyFileStr" xml:space="preserve">
+    <value>選取共通密鑰檔案:</value>
+  </data>
+  <data name="SelectLoaderDolFileStr" xml:space="preserve">
+    <value>選取USB loader DOL檔案:</value>
+  </data>
+  <data name="SelectWadOutputFolderStr" xml:space="preserve">
+    <value>選取一個資料夾儲存頻道的WAD檔案:</value>
+  </data>
+</root>

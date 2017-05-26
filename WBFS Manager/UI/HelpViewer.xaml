@@ -1,0 +1,13 @@
+﻿<Window x:Class="WBFSManager.UI.HelpViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="450" Width="300" ResizeMode="CanResizeWithGrip" Icon="/WBFSManager;component/Content/WBFSManagerNew.png"
+    Title="{Resx ResxName=WBFSManager.UI.Localization.HelpViewer.HelpViewerR, Key=HelpText}"> <!--Height="300" Width="300"-->
+    <Grid>
+        <DockPanel LastChildFill="True">
+            <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="15" FontWeight="ExtraBold" Text="{Resx ResxName=WBFSManager.UI.Localization.HelpViewer.HelpViewerR, Key=HelpText}"></TextBlock>
+            <Frame DockPanel.Dock="Bottom" Name="helpFrame" Source="http://wbfsmanager.codeplex.com/Wiki/View.aspx?title=Help">
+            </Frame>
+        </DockPanel>
+    </Grid>
+</Window>

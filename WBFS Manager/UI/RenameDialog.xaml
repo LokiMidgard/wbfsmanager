@@ -1,0 +1,28 @@
+﻿<Window x:Uid="Window_1" x:Class="WBFSManager.UI.RenameDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xml:lang="en-US" Icon="../Content/WBFSManagerNew.png"
+    Title="{Resx ResxName=WBFSManager.UI.Localization.RenameDialog.RenameDialogR, Key=RenameTitleText}" Height="127" Width="413" WindowStartupLocation="CenterOwner" ResizeMode="NoResize" ShowInTaskbar="True" SizeToContent="Height" SnapsToDevicePixels="True">
+    <Grid x:Uid="Grid_1">
+        <Grid.RowDefinitions>
+            <RowDefinition x:Uid="RowDefinition_1" Height="Auto"/>
+            <RowDefinition x:Uid="RowDefinition_2" Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid x:Uid="Grid_2" Grid.Row="0" Margin="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_2"/>
+            </Grid.ColumnDefinitions>
+            <Label x:Uid="Label_1" Grid.Column="0" Content="{Resx ResxName=WBFSManager.UI.Localization.RenameDialog.RenameDialogR, Key=NewNameText}"></Label>
+            <TextBox x:Uid="NewNameTextBox" Name="NewNameTextBox" Grid.Column="1" MaxLength="57" MaxLines="1" TabIndex="1"></TextBox>
+        </Grid>
+        <Grid x:Uid="Grid_3" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Uid="ColumnDefinition_3"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_4" Width="Auto"/>
+                <ColumnDefinition x:Uid="ColumnDefinition_5" Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Uid="OkButton" Name="OkButton" Margin="3" Grid.Column="1" MinWidth="100" IsDefault="True" Click="OkButton_Click" TabIndex="2" Content="{Resx ResxName=WBFSManager.UI.Localization.RenameDialog.RenameDialogR, Key=OkButtonText}"></Button>
+            <Button x:Uid="CancelButton" Name="CancelButton" Margin="3" Grid.Column="2" MinWidth="100" IsCancel="True" IsDefault="False" TabIndex="3" Content="{Resx ResxName=WBFSManager.UI.Localization.RenameDialog.RenameDialogR, Key=CancelButtonText}"></Button>
+        </Grid>
+    </Grid>
+</Window>

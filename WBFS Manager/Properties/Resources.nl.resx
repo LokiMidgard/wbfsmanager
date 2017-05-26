@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CompletedAddingShortStr" xml:space="preserve">
+    <value>Toevoegen voltooid.</value>
+  </data>
+  <data name="CompletedAddingStr" xml:space="preserve">
+    <value>Ingaves toevoegen aan WBSF schijf voltooid.</value>
+  </data>
+  <data name="CompletedExtractShortStr" xml:space="preserve">
+    <value>Overzetten voltooid.</value>
+  </data>
+  <data name="CompletedExtractStr" xml:space="preserve">
+    <value>Overzetten vanaf WBFS schijf voltooid.</value>
+  </data>
+  <data name="CopyProgressStr" xml:space="preserve">
+    <value>Voortgang kopiëren</value>
+  </data>
+  <data name="DownloadFromWebPromptShortText" xml:space="preserve">
+    <value>Covers downloaden?</value>
+  </data>
+  <data name="DownloadFromWebPromptText" xml:space="preserve">
+    <value>Wilt u spelcovers downloaden van het internet? (U kan deze instelling veranderen in het bewerken menu.)</value>
+  </data>
+  <data name="ErrorAddExistsStr" xml:space="preserve">
+    <value>. Deze iso staat reeds op de WBFS schijf.</value>
+  </data>
+  <data name="ErrorAddingNoDriveShortStr" xml:space="preserve">
+    <value>Fout bij toevoegen.</value>
+  </data>
+  <data name="ErrorAddingNoDriveStr" xml:space="preserve">
+    <value>Fout bij toevoegen aan WBFS schijf: Kon geen toegang tot schijf krijgen.</value>
+  </data>
+  <data name="ErrorAddingShortStr" xml:space="preserve">
+    <value>Leesfout</value>
+  </data>
+  <data name="ErrorAddingStr" xml:space="preserve">
+    <value>Fout bij toevoegen aan de toe te voegen lijst: Probeer minder mappen te selecteren.</value>
+  </data>
+  <data name="ErrorAddLoadingStr" xml:space="preserve">
+    <value>. Er is een fout gebeurd bij het inlezen van de WBFS schijf.</value>
+  </data>
+  <data name="ErrorAddReadStr" xml:space="preserve">
+    <value>. Er is een fout gebeurd bij het inlezen van het iso bestand.</value>
+  </data>
+  <data name="ErrorCreatingHBCShortStr" xml:space="preserve">
+    <value>Fout bij aanmaken HBC ingave</value>
+  </data>
+  <data name="ErrorCreatingHBCStr" xml:space="preserve">
+    <value>Fout bij aanmaken HBC ingave, .dol bestand ontbreekt.</value>
+  </data>
+  <data name="ErrorDeleteNotFoundStr" xml:space="preserve">
+    <value>Spelschijf kon niet gevonden worden op WBFS schijf.</value>
+  </data>
+  <data name="ErrorDeleteShortStr" xml:space="preserve">
+    <value>Fout bij verwijderen van spel</value>
+  </data>
+  <data name="ErrorDeleteStr" xml:space="preserve">
+    <value>Er is een fout gebeurd bij het verwijderen van het spel:</value>
+  </data>
+  <data name="ErrorEstimateLoadingDriveStr" xml:space="preserve">
+    <value>Er is een fout gebeurd bij het inlezen van de WBFS schijf.</value>
+  </data>
+  <data name="ErrorEstimateReadingImageStr" xml:space="preserve">
+    <value>Er is een fout gebeurd bij het inlezen van het iso bestand.</value>
+  </data>
+  <data name="ErrorEstimatingShortStr" xml:space="preserve">
+    <value>Fout bij het schatten van spelgrootte.</value>
+  </data>
+  <data name="ErrorEstimatingStr" xml:space="preserve">
+    <value>Schattingsfout:</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesShortStr" xml:space="preserve">
+    <value>Er zijn geen items.</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesStr" xml:space="preserve">
+    <value>Er zijn geen items om over te zetten naar ISO.</value>
+  </data>
+  <data name="ErrorExtractingP1ShortStr" xml:space="preserve">
+    <value>Fout bij overzetten spel.</value>
+  </data>
+  <data name="ErrorExtractingP1Str" xml:space="preserve">
+    <value>Er is een fout gebeurd bij het overzetten van het spel.</value>
+  </data>
+  <data name="ErrorExtractingShortStr" xml:space="preserve">
+    <value>Fout bij overzetten schijf.</value>
+  </data>
+  <data name="ErrorExtractingStr" xml:space="preserve">
+    <value>Er is een fout gebeurd bij het overzetten van het spel: Kon geen toegang krijgen tot de schijf.</value>
+  </data>
+  <data name="ErrorExtrLoadingStr" xml:space="preserve">
+    <value>. Er is een fout gebeurd bij het inlezen van de WBFS schijf.</value>
+  </data>
+  <data name="ErrorExtrNoDriveStr" xml:space="preserve">
+    <value>. Kan geen schrijftoegang verkrijgen voor WBFS schijf.</value>
+  </data>
+  <data name="ErrorExtrNoGameStr" xml:space="preserve">
+    <value>. Spelschijf kon niet gevonden worden op WBFS schijf.</value>
+  </data>
+  <data name="ErrorFormatInvalidShortStr" xml:space="preserve">
+    <value>Ongeldige schijfletter.</value>
+  </data>
+  <data name="ErrorFormatInvalidStr" xml:space="preserve">
+    <value>Ongeldige schijfletter om te formatteren.</value>
+  </data>
+  <data name="ErrorFormatShortStr" xml:space="preserve">
+    <value>Formatteerfout</value>
+  </data>
+  <data name="ErrorFormatStr" xml:space="preserve">
+    <value>Schijf kon niet geformatteerd worden.</value>
+  </data>
+  <data name="ErrorLoadingDriveShortStr" xml:space="preserve">
+    <value>Inleesfout</value>
+  </data>
+  <data name="ErrorLoadingDriveStr" xml:space="preserve">
+    <value>Schijf kon niet ingelezen worden: Zorg dat de schijf niet ingebruik is en dat deze geformatteerd is in WBFS formaat.</value>
+  </data>
+  <data name="ErrorReadingDriveStatsShortStr" xml:space="preserve">
+    <value>Fout bij inlezen schijfstatistieken.</value>
+  </data>
+  <data name="ErrorReadingDriveStatsStr" xml:space="preserve">
+    <value>Fout bij inlezen schijfstatistieken: Kon geen toegang krijgen tot schijf.</value>
+  </data>
+  <data name="ErrorReadingISOShortStr" xml:space="preserve">
+    <value>Fout bij inlezen ISO info.</value>
+  </data>
+  <data name="ErrorReadingISOStr" xml:space="preserve">
+    <value>Fout bij inlezen ISO info: Kon geen toegang krijgen tot schijf.</value>
+  </data>
+  <data name="ErrorRenameCantLoadStr" xml:space="preserve">
+    <value>Kon spel niet inladen.</value>
+  </data>
+  <data name="ErrorRenameInvalidShortStr" xml:space="preserve">
+    <value>Ongeldige naam.</value>
+  </data>
+  <data name="ErrorRenameInvalidStr" xml:space="preserve">
+    <value>Ongeldige naam opgegeven: Naam moet tussen 0 en 57 karakters lang zijn.</value>
+  </data>
+  <data name="ErrorRenameShortStr" xml:space="preserve">
+    <value>Hernoemfout.</value>
+  </data>
+  <data name="ErrorRenameStr" xml:space="preserve">
+    <value>Kon schijf niet hernoemen.</value>
+  </data>
+  <data name="ErrorWhileAddingShortStr" xml:space="preserve">
+    <value>Fout bij toevoegen spel.</value>
+  </data>
+  <data name="ErrorWhileAddingStr" xml:space="preserve">
+    <value>Fout bij toevoegen aan WBFS schijf:</value>
+  </data>
+  <data name="ExtractionProgressStr" xml:space="preserve">
+    <value>Voortgang overzetten</value>
+  </data>
+  <data name="FormatWarningP1Str" xml:space="preserve">
+    <value>WAARSCHUWING: Dit verwijdert alle data op de gekozen partitie (</value>
+  </data>
+  <data name="FormatWarningP2Str" xml:space="preserve">
+    <value>). Data kan niet teruggezet worden. De schrijver is niet verantwoordelijk voor dataverlies veroorzaakt door accidentieel formatteren. VERWIJDER DE SCHIJF NIET TIJDENS HET FORMATTEREN!
+Bent u zeker dat u wilt formatteren</value>
+  </data>
+  <data name="FormatWarningShortStr" xml:space="preserve">
+    <value>WAARSCHUWING: Dit verwijdert alle data op de gekozen partitie (</value>
+  </data>
+  <data name="MetaXmlLongDescStr" xml:space="preserve">
+    <value>Dit start een WBFS spellader voor </value>
+  </data>
+  <data name="MetaXmlShortDescStr" xml:space="preserve">
+    <value> op USB schijf</value>
+  </data>
+  <data name="MustSelectEntryToRemoveShortStr" xml:space="preserve">
+    <value>Geen items geselecteerd.</value>
+  </data>
+  <data name="MustSelectEntryToRemoveStr" xml:space="preserve">
+    <value>U moet een enkele ingave selecteren om te verwijderen.</value>
+  </data>
+  <data name="MustSelectEntryToRenameShortStr" xml:space="preserve">
+    <value>Geen items geselecteerd.</value>
+  </data>
+  <data name="MustSelectEntryToRenameStr" xml:space="preserve">
+    <value>U moet een enkele ingave selecteren om te hernoemen.</value>
+  </data>
+  <data name="MustSelectExistingFolderShortStr" xml:space="preserve">
+    <value>Ongeldige map.</value>
+  </data>
+  <data name="MustSelectExistingFolderStr" xml:space="preserve">
+    <value>U moet een bestaande map kiezen.</value>
+  </data>
+  <data name="NoDrivesDetectedShortStr" xml:space="preserve">
+    <value>Geen schijven geselecteerd.</value>
+  </data>
+  <data name="NoDriveSelectedShortStr" xml:space="preserve">
+    <value>Geen schijf geselecteerd.</value>
+  </data>
+  <data name="NoDriveSelectedStr" xml:space="preserve">
+    <value>Geen schijf geselecteerd om spellen aan toe te voegen.</value>
+  </data>
+  <data name="NoIsoSelectedToAddShortStr" xml:space="preserve">
+    <value>Geen isos geselecteerd.</value>
+  </data>
+  <data name="NoIsoSelectedToAddStr" xml:space="preserve">
+    <value>Geen isos om toe te voegen, gebruik de bladerknop om isos aan de toe te voegen lijst toe te voegen.</value>
+  </data>
+  <data name="SelectCoversDirStr" xml:space="preserve">
+    <value>Kies de opslaglocatie voor covers:</value>
+  </data>
+  <data name="SelectDirForHBCStr" xml:space="preserve">
+    <value>Kies een opslaglocatie:</value>
+  </data>
+  <data name="SelectImageToAddStr" xml:space="preserve">
+    <value>Kies een ISO bestand om toe te voegen:</value>
+  </data>
+  <data name="SelectLocationExtractStr" xml:space="preserve">
+    <value>Geef een naam en locatie voor het ISO bestand in:</value>
+  </data>
+  <data name="UnableToDetectDrivesStr" xml:space="preserve">
+    <value>Geen harde schijven gevonden. WBFS manager wordt nu gesloten.</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="donatePayPal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Content\donatePayPalNl.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfirmDeleteShortStr" xml:space="preserve">
+    <value>Verwijderen?</value>
+  </data>
+  <data name="ConfirmDeleteStr" xml:space="preserve">
+    <value>Weet u zeker dat u wilt verwijderen </value>
+  </data>
+  <data name="ChooseTempFolderText" xml:space="preserve">
+    <value>Kies een tijdelijke map:</value>
+  </data>
+  <data name="DriveToDriveProgressStr" xml:space="preserve">
+    <value>Schijf-Naar-Schijf overzetting voortgang</value>
+  </data>
+  <data name="ErrorExtractingRARShortStr" xml:space="preserve">
+    <value>Fout bij uitpakken RAR</value>
+  </data>
+  <data name="ErrorFollowingWhileTransStr" xml:space="preserve">
+    <value>De volgende fouten zijn voorgekomen bij het overzetten:</value>
+  </data>
+  <data name="ErrorInvalidFolderShortStr" xml:space="preserve">
+    <value>Ongeldige map</value>
+  </data>
+  <data name="ErrorInvalidFolderStr" xml:space="preserve">
+    <value>Ongeldige map geselecteerd, selecteer een andere.</value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceDriveStr" xml:space="preserve">
+    <value>Geen items op bronschijf.</value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceNonSelectedStr" xml:space="preserve">
+    <value>Geen items op bronschijf of geen items geselecteerd.</value>
+  </data>
+  <data name="ErrorNoSecondaryDriveLoadedStr" xml:space="preserve">
+    <value>Geen secundaire schijf ingeladen.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceLowerStr" xml:space="preserve">
+    <value>, niet genoeg ruimte.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceShortStr" xml:space="preserve">
+    <value>Niet genoeg ruimte.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceTempFolderStr" xml:space="preserve">
+    <value>Niet genoeg ruimte in tijdelijke map, kies een tijdelijke map met minstens 4.8GB ruimte vrij.</value>
+  </data>
+  <data name="ErrorOccuredExtractingStr" xml:space="preserve">
+    <value>Fouten voorgekomen bij het overzetten van spellen. Zweef met je muis over het fout icoontje om de fout te lezen.</value>
+  </data>
+  <data name="ErrorOccuredWhileTransShortStr" xml:space="preserve">
+    <value>Overzetfout</value>
+  </data>
+  <data name="ErrorOccuredWhileTransStr" xml:space="preserve">
+    <value>Er is een fout voorgekomen bij het overzetten:</value>
+  </data>
+  <data name="ErrorRARMissingVolP1Str" xml:space="preserve">
+    <value>Ontbrekend volume:</value>
+  </data>
+  <data name="ErrorRarMissingVolP2Str" xml:space="preserve">
+    <value> van RAR set voor bestand:</value>
+  </data>
+  <data name="ErrorRarMissingVolShortStr" xml:space="preserve">
+    <value>Ontbrekend volume</value>
+  </data>
+  <data name="ErrorRarPassReqdShortStr" xml:space="preserve">
+    <value>Wachtwoord vereist</value>
+  </data>
+  <data name="ErrorRarPassReqdStr" xml:space="preserve">
+    <value>Wachtwoord vereist voor:</value>
+  </data>
+  <data name="ErrorReadingSomeIsosStr" xml:space="preserve">
+    <value>Fout(en) voorgekomen bij het lezen van ISO bestanden.</value>
+  </data>
+  <data name="ErrorsOccuredExtractingShortStr" xml:space="preserve">
+    <value>Fouten voorgekomen bij het overzetten.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingShortStr" xml:space="preserve">
+    <value>Fouten voorgekomen bij het toevoegen.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingStr" xml:space="preserve">
+    <value>Fouten voorgekomen bij het toevoegen van spellen. Zweef met je muis over het fout icoontje om de fout te lezen.</value>
+  </data>
+  <data name="ErrorsTransShortStr" xml:space="preserve">
+    <value>Overzetfout</value>
+  </data>
+  <data name="FormatSuccessfulShortStr" xml:space="preserve">
+    <value>Succesvol geformatteerd.</value>
+  </data>
+  <data name="FormatSuccessfulStr" xml:space="preserve">
+    <value>Succesvol geformatteerd. De WBFS schijf is nu klaar voor gebruik.</value>
+  </data>
+  <data name="InvalidTempFolderStr" xml:space="preserve">
+    <value>Ongeldige tijdelijke map</value>
+  </data>
+  <data name="MustSelectValidFolderText" xml:space="preserve">
+    <value>U moet een tijdelijke map kiezen</value>
+  </data>
+  <data name="ReadingFilesText" xml:space="preserve">
+    <value>Bezig met bestanden lezen</value>
+  </data>
+  <data name="SaveGameListAsStr" xml:space="preserve">
+    <value>Spellijst opslaan als:</value>
+  </data>
+  <data name="SelectDirectoryToExtractToStr" xml:space="preserve">
+    <value>Selecteer een map om de ISO bestanden naar over te zetten:</value>
+  </data>
+  <data name="WarningNotEnoughSpaceTempStr" xml:space="preserve">
+    <value>De geselecteerde tijdelijke map heeft niet voldoende vrije ruimte, als u geen map selecteert met minstens 4.8GB vrij kunnen er zich problemen voordoen bij RAR extractie.</value>
+  </data>
+  <data name="FormatWarningP3Str" xml:space="preserve">
+    <value>Bent u zeker dat u wilt formatteren </value>
+  </data>
+  <data name="ChannCreationCompleteStr" xml:space="preserve">
+    <value>Kanaalcreatie voltooid.</value>
+  </data>
+  <data name="CompletedChanCreationSuccessShortStr" xml:space="preserve">
+    <value>Kanaalcreatie successvol</value>
+  </data>
+  <data name="CompletedChannelCreationSuccessStr" xml:space="preserve">
+    <value>Kanaalcreatie successvol voltooid</value>
+  </data>
+  <data name="CompletedHBCEntryStr" xml:space="preserve">
+    <value>Homebrew Kanaal ingave gecreëerd.</value>
+  </data>
+  <data name="CompletedStr" xml:space="preserve">
+    <value>Voltooid</value>
+  </data>
+  <data name="CreatingChannelsProgressText" xml:space="preserve">
+    <value>Bezig met kanalen creëren...</value>
+  </data>
+  <data name="ErrorChanIdMustBeFourStr" xml:space="preserve">
+    <value>Kanaal ID moet 4 karakter zijn.</value>
+  </data>
+  <data name="ErrorCodeStr" xml:space="preserve">
+    <value> (Foutcode</value>
+  </data>
+  <data name="ErrorCreatinChanSingleStr" xml:space="preserve">
+    <value>Fout bij creëren kanaal</value>
+  </data>
+  <data name="ErrorCreatingChanForStr" xml:space="preserve">
+    <value>Fout bij creëren kanaal voor</value>
+  </data>
+  <data name="ErrorCreatingChannelErrCodeStr" xml:space="preserve">
+    <value>Fout bij creëren kanaal. (Foutcode</value>
+  </data>
+  <data name="ErrorEmptyEntryListShortStr" xml:space="preserve">
+    <value>Lege ingavelijst</value>
+  </data>
+  <data name="ErrorEmptyEntryListStr" xml:space="preserve">
+    <value>Lijst van ingaven om kanalen voor te creëren is leeg.</value>
+  </data>
+  <data name="ErrorFormatClosingDriveStr" xml:space="preserve">
+    <value>Er is een fout voorgekomen bij het sluiten van de schijf.</value>
+  </data>
+  <data name="ErrorIncorrectVersionShortStr" xml:space="preserve">
+    <value>Foutieve versie</value>
+  </data>
+  <data name="ErrorIncorrectVersionStr" xml:space="preserve">
+    <value>Deze versie van WBFS Manager is niet compatibel met uw operating system. Als u een64-bit OS gebruikt, installeer dan de 64-bit versie van WBFS manager.</value>
+  </data>
+  <data name="ErrorInvalidBaseWadFilenameStr" xml:space="preserve">
+    <value>Foutieve basiswad, bestand bestaat niet.</value>
+  </data>
+  <data name="ErrorInvalidChanCreationValsStr" xml:space="preserve">
+    <value>Foutieve waarden for kanaalcreatie instellingen.</value>
+  </data>
+  <data name="ErrorInvalidChanIdOrOutFileStr" xml:space="preserve">
+    <value>Foutief kanaal ID of uitvoer bestandsnaam.</value>
+  </data>
+  <data name="ErrorInvalidChanIdStr" xml:space="preserve">
+    <value>Foutief kanaal ID</value>
+  </data>
+  <data name="ErrorInvalidChannelSettingsFixStr" xml:space="preserve">
+    <value>Foutieve kanaalcreatie instellingen. Controleer de instellingen in het opties menu.</value>
+  </data>
+  <data name="ErrorInvalidCommonKeyFilenameStr" xml:space="preserve">
+    <value>Foutief gedeelde sleutelbestand, bestand bestaat niet.</value>
+  </data>
+  <data name="ErrorInvalidDolFilenameStr" xml:space="preserve">
+    <value>Foutieve USB Loader .dol, bestand bestaat niet.</value>
+  </data>
+  <data name="ErrorInvalidFilename" xml:space="preserve">
+    <value>Foutieve bestandsnaam</value>
+  </data>
+  <data name="ErrorInvalidIsoPathForStr" xml:space="preserve">
+    <value>Foutief ISO pad voor</value>
+  </data>
+  <data name="ErrorInvalidIsoPathShortStr" xml:space="preserve">
+    <value>Foutief ISO pad voor</value>
+  </data>
+  <data name="ErrorInvalidIsoPathStr" xml:space="preserve">
+    <value>Foutief ISO bestand pad.</value>
+  </data>
+  <data name="ErrorInvalidOuputWadFilenameStr" xml:space="preserve">
+    <value>Foutieve uitvoer WAD bestandsnaam.</value>
+  </data>
+  <data name="ErrorInvalidPartitionSettingStr" xml:space="preserve">
+    <value>Foutieve partitie instellingen geselecteerd.</value>
+  </data>
+  <data name="ErrorInvalidSettingsStr" xml:space="preserve">
+    <value>Foutieve instellingen.</value>
+  </data>
+  <data name="ErrorInvalidValsShortStr" xml:space="preserve">
+    <value>Foutieve waarden for kanaalcreatie instellingen.</value>
+  </data>
+  <data name="ErrorsCreatingChannelsStr" xml:space="preserve">
+    <value>Fouten voorgekomen bij het creëren van kanalen</value>
+  </data>
+  <data name="ErrorUnableToCreateDirShortStr" xml:space="preserve">
+    <value>Kan map niet aanmaken</value>
+  </data>
+  <data name="ErrorUnableToCreateTempDirStr" xml:space="preserve">
+    <value>Kan tijdelijke map niet aanmaken:</value>
+  </data>
+  <data name="NewUpdateAvailableStr" xml:space="preserve">
+    <value>Een nieuwe update is beschikbaar.</value>
+  </data>
+  <data name="ParitionOptionRemoveUpdateStr" xml:space="preserve">
+    <value>Verwijder updatepartitie, behoud de rest</value>
+  </data>
+  <data name="PartitionOptionAllPartStr" xml:space="preserve">
+    <value>Alle partities</value>
+  </data>
+  <data name="PartitonOptionOnlyGameStr" xml:space="preserve">
+    <value>Enkel spelpartities</value>
+  </data>
+  <data name="ProgressCancellingText" xml:space="preserve">
+    <value>Operatie zal annuleren na huidig item.</value>
+  </data>
+  <data name="SaveWadFileAsStr" xml:space="preserve">
+    <value>Sla het WAD bestand op als...</value>
+  </data>
+  <data name="SelectBaseWadStr" xml:space="preserve">
+    <value>Selecteer het basis WAD bestand:</value>
+  </data>
+  <data name="SelectCommonKeyFileStr" xml:space="preserve">
+    <value>Selecteer het gedeeld sleutel bestand:</value>
+  </data>
+  <data name="SelectLoaderDolFileStr" xml:space="preserve">
+    <value>Selecteer het USB Loader DOL bestand:</value>
+  </data>
+  <data name="SelectWadOutputFolderStr" xml:space="preserve">
+    <value>Selecteer een map om het WAD bestand voor de kanalen in op te slaan:</value>
+  </data>
+  <data name="CompletedExportingListStr" xml:space="preserve">
+    <value>Lijst exporteren voltooid.</value>
+  </data>
+  <data name="NoUpdatesAvailableShortStr" xml:space="preserve">
+    <value>Geen updates beschikbaar.</value>
+  </data>
+  <data name="NoUpdatesAvailableStr" xml:space="preserve">
+    <value>Geen updates beschikbaar momenteel.</value>
+  </data>
+</root>

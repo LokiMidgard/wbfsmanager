@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ChooseTempFolderText" xml:space="preserve">
+    <value>Sceglie na cartella temporanea:</value>
+  </data>
+  <data name="CompletedAddingShortStr" xml:space="preserve">
+    <value>Finito de aggiunge</value>
+  </data>
+  <data name="CompletedAddingStr" xml:space="preserve">
+    <value>Finito de aggiunge ta la periferica WBFS</value>
+  </data>
+  <data name="CompletedExtractShortStr" xml:space="preserve">
+    <value>Finito de cavà</value>
+  </data>
+  <data name="CompletedExtractStr" xml:space="preserve">
+    <value>Finito de cavà dalla periferica WBFS</value>
+  </data>
+  <data name="ConfirmDeleteShortStr" xml:space="preserve">
+    <value>L'levi?</value>
+  </data>
+  <data name="ConfirmDeleteStr" xml:space="preserve">
+    <value>Se sicuro de volello levà?</value>
+  </data>
+  <data name="CopyProgressStr" xml:space="preserve">
+    <value>Sto a copià...</value>
+  </data>
+  <data name="DownloadFromWebPromptShortText" xml:space="preserve">
+    <value>Voi scarcà le copertine?</value>
+  </data>
+  <data name="DownloadFromWebPromptText" xml:space="preserve">
+    <value>Voi attivà lo scarcamento automatico delle copertine da internette? (Dopo la poi cambia 'st'impostazione, dal menu scatuzza)</value>
+  </data>
+  <data name="DriveToDriveProgressStr" xml:space="preserve">
+    <value>Avanzamento spostamento Disco-A-Disco</value>
+  </data>
+  <data name="ErrorAddExistsStr" xml:space="preserve">
+    <value>L disco ce sta già ta la periferica WBFS</value>
+  </data>
+  <data name="ErrorAddingNoDriveShortStr" xml:space="preserve">
+    <value>'N putanaio quando aggiungevo l disco</value>
+  </data>
+  <data name="ErrorAddingNoDriveStr" xml:space="preserve">
+    <value>E' successo n casino quand'aggiungevo l disco ta la periferica WBFS. Mpossibile accede ta la periferica</value>
+  </data>
+  <data name="ErrorAddingShortStr" xml:space="preserve">
+    <value>'N putanaio quando leggevo I fails</value>
+  </data>
+  <data name="ErrorAddingStr" xml:space="preserve">
+    <value>. E' successo n casino aggiungevo i fails alla lista dei Giochi Da Aggiunge. Prova a sceglie meno cartelle</value>
+  </data>
+  <data name="ErrorAddLoadingStr" xml:space="preserve">
+    <value>. E' successo n casino quando carcavo la periferica WBFS</value>
+  </data>
+  <data name="ErrorAddReadStr" xml:space="preserve">
+    <value>E' successo n casino quando leggevo l fail immagine dalla periferica</value>
+  </data>
+  <data name="ErrorCreatingHBCShortStr" xml:space="preserve">
+    <value>'N putanaio a' creà le voci HBC</value>
+  </data>
+  <data name="ErrorCreatingHBCStr" xml:space="preserve">
+    <value>'N putanaio a' creà le voci HBC, n's'artrova l fail .dol</value>
+  </data>
+  <data name="ErrorDeleteNotFoundStr" xml:space="preserve">
+    <value>L disco del gioco nse po trovà ta la periferica WBFS</value>
+  </data>
+  <data name="ErrorDeleteShortStr" xml:space="preserve">
+    <value>'N putanaio a rimove l gioco</value>
+  </data>
+  <data name="ErrorDeleteStr" xml:space="preserve">
+    <value>E' successo n casino quando cavavo l gioco:</value>
+  </data>
+  <data name="ErrorEstimateLoadingDriveStr" xml:space="preserve">
+    <value>E' successo n casino quando carcavo la periferica WBFS</value>
+  </data>
+  <data name="ErrorEstimateReadingImageStr" xml:space="preserve">
+    <value>E' successo n casino quando leggevo l fail immagine dalla periferica</value>
+  </data>
+  <data name="ErrorEstimatingShortStr" xml:space="preserve">
+    <value>'N putanaio a stimà le dimensioni del gioco</value>
+  </data>
+  <data name="ErrorEstimatingStr" xml:space="preserve">
+    <value>'N putanaio ta la stima de:</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesShortStr" xml:space="preserve">
+    <value>Nce sta niente</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesStr" xml:space="preserve">
+    <value>Nce sta niente ta la periferica da dove cavà la ISO</value>
+  </data>
+  <data name="ErrorExtractingP1ShortStr" xml:space="preserve">
+    <value>'N putanaio a cavà l gioco</value>
+  </data>
+  <data name="ErrorExtractingP1Str" xml:space="preserve">
+    <value>E' successo n casino quando cavavo l disco</value>
+  </data>
+  <data name="ErrorExtractingRARShortStr" xml:space="preserve">
+    <value>'N putanaio a cavà l'RAR</value>
+  </data>
+  <data name="ErrorExtractingShortStr" xml:space="preserve">
+    <value>'N putanaio a cavà l disco</value>
+  </data>
+  <data name="ErrorExtractingStr" xml:space="preserve">
+    <value>E' successo n casino quando cavavo l disco dalla periferica. Mpossibile accede ta la periferica.</value>
+  </data>
+  <data name="ErrorExtrLoadingStr" xml:space="preserve">
+    <value>. E' successo n casino quando carcavo la periferica WBFS</value>
+  </data>
+  <data name="ErrorExtrNoDriveStr" xml:space="preserve">
+    <value>. mpossibile apri l gioco n scrittura sulla periferica WBFS</value>
+  </data>
+  <data name="ErrorExtrNoGameStr" xml:space="preserve">
+    <value>. L disco del gioco nse trova sulla periferica WBFS</value>
+  </data>
+  <data name="ErrorFollowingWhileTransStr" xml:space="preserve">
+    <value>Ce so stati sti errori quando spostavo:</value>
+  </data>
+  <data name="ErrorFormatInvalidShortStr" xml:space="preserve">
+    <value>La lettera della periferica nva bene</value>
+  </data>
+  <data name="ErrorFormatInvalidStr" xml:space="preserve">
+    <value>La lettera della periferica scelta per formattà nva bene</value>
+  </data>
+  <data name="ErrorFormatShortStr" xml:space="preserve">
+    <value>'N putanaio a formattà</value>
+  </data>
+  <data name="ErrorFormatStr" xml:space="preserve">
+    <value>E' successo n casino quando formattavo la periferica</value>
+  </data>
+  <data name="ErrorInvalidFolderShortStr" xml:space="preserve">
+    <value>La cartella nva bene.</value>
+  </data>
+  <data name="ErrorInvalidFolderStr" xml:space="preserve">
+    <value>La cartella scelta nva bene, scegliene 'n'altra.</value>
+  </data>
+  <data name="ErrorLoadingDriveShortStr" xml:space="preserve">
+    <value>N putanaio a carcà la periferica</value>
+  </data>
+  <data name="ErrorLoadingDriveStr" xml:space="preserve">
+    <value>E' successo n casino quando carcavo la periferica . Assicurete che l nne' ste a usà l disco e che l'e' formattato n WBFS </value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceDriveStr" xml:space="preserve">
+    <value>Nce sta nessuna voce sulla periferica sorgente.</value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceNonSelectedStr" xml:space="preserve">
+    <value>Nce sta nessuna voce sulla periferica sorgente, o non ne hai scelta manco una</value>
+  </data>
+  <data name="ErrorNoSecondaryDriveLoadedStr" xml:space="preserve">
+    <value>Nce sta nessuna periferica secondaria caricata per copiacce i giochi.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceLowerStr" xml:space="preserve">
+    <value>. lo spazio nn basta</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceShortStr" xml:space="preserve">
+    <value>Nce sta abbastanza spazio</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceTempFolderStr" xml:space="preserve">
+    <value>Lo spazio ta la cartella temporanea è pochino, scegliene 'n'altra con almeno 4.8GB liberi.</value>
+  </data>
+  <data name="ErrorOccuredExtractingStr" xml:space="preserve">
+    <value>'N putanaio a cavà qualche gioco. Sposta l mouse sul cazzino dell'errore vicino tal gioco per leggelo.</value>
+  </data>
+  <data name="ErrorOccuredWhileTransShortStr" xml:space="preserve">
+    <value>'N putanaio nello spostamento</value>
+  </data>
+  <data name="ErrorOccuredWhileTransStr" xml:space="preserve">
+    <value>'N putanaio a spostà:</value>
+  </data>
+  <data name="ErrorRARMissingVolP1Str" xml:space="preserve">
+    <value>Ns'artrova l volume:</value>
+  </data>
+  <data name="ErrorRarMissingVolP2Str" xml:space="preserve">
+    <value> dal set RAR pel fail:</value>
+  </data>
+  <data name="ErrorRarMissingVolShortStr" xml:space="preserve">
+    <value>Ns'artrova l Volume:</value>
+  </data>
+  <data name="ErrorRarPassReqdShortStr" xml:space="preserve">
+    <value>Ce vole la password</value>
+  </data>
+  <data name="ErrorRarPassReqdStr" xml:space="preserve">
+    <value>Ce vole la password per:</value>
+  </data>
+  <data name="ErrorReadingDriveStatsShortStr" xml:space="preserve">
+    <value>'N putanaio a legge le statistiche della perferca.</value>
+  </data>
+  <data name="ErrorReadingDriveStatsStr" xml:space="preserve">
+    <value>'N putanaio a legge le statistiche della periferica. Mpossibile accede ta la periferica.</value>
+  </data>
+  <data name="ErrorReadingISOShortStr" xml:space="preserve">
+    <value>'N putanaio a legge le nformazioni ISO</value>
+  </data>
+  <data name="ErrorReadingISOStr" xml:space="preserve">
+    <value>E' successo n casino quando leggevo le nformazioni ISO. Mpossibile accede alla periferica</value>
+  </data>
+  <data name="ErrorReadingSomeIsosStr" xml:space="preserve">
+    <value>'N putanaio a legge qualche fail ISO</value>
+  </data>
+  <data name="ErrorRenameCantLoadStr" xml:space="preserve">
+    <value>Mpossibile carcare l gioco</value>
+  </data>
+  <data name="ErrorRenameInvalidShortStr" xml:space="preserve">
+    <value>L nome nva bene</value>
+  </data>
+  <data name="ErrorRenameInvalidStr" xml:space="preserve">
+    <value>L nome specificato nva bene. L nome deve esse lungo da 0 a 57 caratteri</value>
+  </data>
+  <data name="ErrorRenameShortStr" xml:space="preserve">
+    <value>'N putanaio a rinominà l disco</value>
+  </data>
+  <data name="ErrorRenameStr" xml:space="preserve">
+    <value>E' successo n casino a rinominà l disco.</value>
+  </data>
+  <data name="ErrorsOccuredExtractingShortStr" xml:space="preserve">
+    <value>'N putanaio a cavà.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingShortStr" xml:space="preserve">
+    <value>'N putanaio a aggiunge.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingStr" xml:space="preserve">
+    <value>'N putanaio a aggiunge qualche gioco. Sposta l mouse sul cazzino dell'errore vicino tal gioco per leggelo.</value>
+  </data>
+  <data name="ErrorsTransShortStr" xml:space="preserve">
+    <value>'N putanaio nello spostamento</value>
+  </data>
+  <data name="ErrorWhileAddingShortStr" xml:space="preserve">
+    <value>'N putanaio a aggiunge l gioco</value>
+  </data>
+  <data name="ErrorWhileAddingStr" xml:space="preserve">
+    <value>E' successo n casino a aggiunge:</value>
+  </data>
+  <data name="ExtractionProgressStr" xml:space="preserve">
+    <value>Sto a cavà...</value>
+  </data>
+  <data name="FormatSuccessfulShortStr" xml:space="preserve">
+    <value>Formattazione a posto</value>
+  </data>
+  <data name="FormatSuccessfulStr" xml:space="preserve">
+    <value>La formattazione è gita bene. La periferica WBFS mò è pronta.</value>
+  </data>
+  <data name="FormatWarningP1Str" xml:space="preserve">
+    <value>STEMOCE: quello che ste a fa cancellerà tutti i dati sulla partizione che è scelto (</value>
+  </data>
+  <data name="FormatWarningP2Str" xml:space="preserve">
+    <value>). Dopo i dati nli poi recuperà più! Lo sviluppatore nn è responsabile per nessuna perdita di dati se hai fatto na formattazione a cazzo. NON CAVA' LA PERIFERICA QUANDO STE A FORMATTA'!</value>
+  </data>
+  <data name="FormatWarningShortStr" xml:space="preserve">
+    <value>STA' ATTENTO!</value>
+  </data>
+  <data name="InvalidTempFolderStr" xml:space="preserve">
+    <value>La cartella temporanea nva bene</value>
+  </data>
+  <data name="MetaXmlLongDescStr" xml:space="preserve">
+    <value>St'affare lancia n game loader WBFS per: </value>
+  </data>
+  <data name="MetaXmlShortDescStr" xml:space="preserve">
+    <value>nto l'HDD-periferica USB</value>
+  </data>
+  <data name="MustSelectEntryToRemoveShortStr" xml:space="preserve">
+    <value>Nn hai scelto niente</value>
+  </data>
+  <data name="MustSelectEntryToRemoveStr" xml:space="preserve">
+    <value>Hai da sceglie na voce sola da toglie.</value>
+  </data>
+  <data name="MustSelectEntryToRenameShortStr" xml:space="preserve">
+    <value>Nn hai scelto niente</value>
+  </data>
+  <data name="MustSelectEntryToRenameStr" xml:space="preserve">
+    <value>Hai da sceglie na voce sola da rinomina.</value>
+  </data>
+  <data name="MustSelectExistingFolderShortStr" xml:space="preserve">
+    <value>La cartella nva bene</value>
+  </data>
+  <data name="MustSelectExistingFolderStr" xml:space="preserve">
+    <value>Hai da sceglie na cartella che c'è già</value>
+  </data>
+  <data name="MustSelectValidFolderText" xml:space="preserve">
+    <value>Devi scegliè na cartella temporanea che va bene.</value>
+  </data>
+  <data name="NoDrivesDetectedShortStr" xml:space="preserve">
+    <value>Nn ho artrovato nessuna periferica</value>
+  </data>
+  <data name="NoDriveSelectedShortStr" xml:space="preserve">
+    <value>Nn hai scelto nessuna periferica  </value>
+  </data>
+  <data name="NoDriveSelectedStr" xml:space="preserve">
+    <value>Nn hai scelto nessuna periferica per aggiungece giochi</value>
+  </data>
+  <data name="NoIsoSelectedToAddShortStr" xml:space="preserve">
+    <value>Nn hai scelto manco na ISO</value>
+  </data>
+  <data name="NoIsoSelectedToAddStr" xml:space="preserve">
+    <value>Nn hai scelto manco na ISO da aggiunge, usa l tasto Arcerca per aggiunge prima le ISO all'elenco Aggiunge</value>
+  </data>
+  <data name="ReadingFilesText" xml:space="preserve">
+    <value>Leggo i fails</value>
+  </data>
+  <data name="SaveGameListAsStr" xml:space="preserve">
+    <value>Salva la lista dei giochi come:</value>
+  </data>
+  <data name="SelectCoversDirStr" xml:space="preserve">
+    <value>Sceglie la cartella de le copertine</value>
+  </data>
+  <data name="SelectDirectoryToExtractToStr" xml:space="preserve">
+    <value>Sceglie na cartella do cavacce i fail ISO</value>
+  </data>
+  <data name="SelectDirForHBCStr" xml:space="preserve">
+    <value>Sceglie na cartella dove salvà</value>
+  </data>
+  <data name="SelectImageToAddStr" xml:space="preserve">
+    <value>Sceglie n fail immagine da aggiunge</value>
+  </data>
+  <data name="SelectLocationExtractStr" xml:space="preserve">
+    <value>Sceglie n posto e n nome per salvà l'immagine ISO come</value>
+  </data>
+  <data name="UnableToDetectDrivesStr" xml:space="preserve">
+    <value>Nn ho artrovato nessuna periferica. Me cavo dal WBFS manager</value>
+  </data>
+  <data name="WarningNotEnoughSpaceTempStr" xml:space="preserve">
+    <value>Ta la cartella temporanea non glie basta lo spazio: te conviene scegliene una diversa che c'abbia almeno 4.8Gb liberi, sennò pol esse che succede n casino quando cavi gli archivi RAR.</value>
+  </data>
+  <data name="FormatWarningP3Str" xml:space="preserve">
+    <value>Se sicuro de volè formattà la periferica </value>
+  </data>
+  <data name="ChannCreationCompleteStr" xml:space="preserve">
+    <value>Creazione del canale a posto</value>
+  </data>
+  <data name="CompletedChanCreationSuccessShortStr" xml:space="preserve">
+    <value>La creazione del canale è gita bene</value>
+  </data>
+  <data name="CompletedChannelCreationSuccessStr" xml:space="preserve">
+    <value>La creazione del canale è gita liscia come l'olio</value>
+  </data>
+  <data name="CompletedHBCEntryStr" xml:space="preserve">
+    <value>La creazione della voce HomeBrew Channel è gita bene</value>
+  </data>
+  <data name="CompletedStr" xml:space="preserve">
+    <value>Fenuto</value>
+  </data>
+  <data name="CreatingChannelsProgressText" xml:space="preserve">
+    <value>Sto a fa i canali...</value>
+  </data>
+  <data name="ErrorChanIdMustBeFourStr" xml:space="preserve">
+    <value>L'ID del canale ha da esse de 4 caratteri preciso</value>
+  </data>
+  <data name="ErrorCodeStr" xml:space="preserve">
+    <value>(Codice errore</value>
+  </data>
+  <data name="ErrorCreatinChanSingleStr" xml:space="preserve">
+    <value>N putanaio a creà l canale</value>
+  </data>
+  <data name="ErrorCreatingChanForStr" xml:space="preserve">
+    <value>è successo n casino a creà l canale per</value>
+  </data>
+  <data name="ErrorCreatingChannelErrCodeStr" xml:space="preserve">
+    <value>è successo n casino a creà l canale per (Codice errore</value>
+  </data>
+  <data name="ErrorEmptyEntryListShortStr" xml:space="preserve">
+    <value>La lista delle voci è vota</value>
+  </data>
+  <data name="ErrorEmptyEntryListStr" xml:space="preserve">
+    <value>La lista delle voci per facce I canali è vota</value>
+  </data>
+  <data name="ErrorFormatClosingDriveStr" xml:space="preserve">
+    <value>è successo n casino a provà a chiude la periferica</value>
+  </data>
+  <data name="ErrorIncorrectVersionShortStr" xml:space="preserve">
+    <value>La versione nva bene</value>
+  </data>
+  <data name="ErrorIncorrectVersionStr" xml:space="preserve">
+    <value>Sta versione de WBFS Manager nnè compatibile col tu sistema operativo. Se usi n sistema a 64bit installa la versione di WBFS Manager pei 64 bit (x64)</value>
+  </data>
+  <data name="ErrorInvalidBaseWadFilenameStr" xml:space="preserve">
+    <value>L fail WAD de base nva bene, l fail n esiste</value>
+  </data>
+  <data name="ErrorInvalidChanCreationValsStr" xml:space="preserve">
+    <value>I valori delle mpostazioni per creà I canali nvan bene</value>
+  </data>
+  <data name="ErrorInvalidChanIdOrOutFileStr" xml:space="preserve">
+    <value>L'ID canale o 'l nome del fail de output nvan bene</value>
+  </data>
+  <data name="ErrorInvalidChanIdStr" xml:space="preserve">
+    <value>L'ID canale nva bene</value>
+  </data>
+  <data name="ErrorInvalidChannelSettingsFixStr" xml:space="preserve">
+    <value>Le impostazioni per creà I canali nvan bene. Sistemele ntol menu OPZIONI (SCATUZZA?)</value>
+  </data>
+  <data name="ErrorInvalidCommonKeyFilenameStr" xml:space="preserve">
+    <value>Il Common key Filename nva bene. Il fail ns'artrova.</value>
+  </data>
+  <data name="ErrorInvalidDolFilenameStr" xml:space="preserve">
+    <value>Il filename .dol USB loader nva bene. Il fail ns'artrova.</value>
+  </data>
+  <data name="ErrorInvalidFilename" xml:space="preserve">
+    <value>L filename nva bene</value>
+  </data>
+  <data name="ErrorInvalidIsoPathForStr" xml:space="preserve">
+    <value>L percorso del fail ISO nva bene per:</value>
+  </data>
+  <data name="ErrorInvalidIsoPathShortStr" xml:space="preserve">
+    <value>L percorso ISO nva bene</value>
+  </data>
+  <data name="ErrorInvalidIsoPathStr" xml:space="preserve">
+    <value>L percorso del fail ISO nva bene.</value>
+  </data>
+  <data name="ErrorInvalidOuputWadFilenameStr" xml:space="preserve">
+    <value>L filename WAD de output nva bene</value>
+  </data>
+  <data name="ErrorInvalidPartitionSettingStr" xml:space="preserve">
+    <value>Le impostazioni del settaggio della partzione nvan bene</value>
+  </data>
+  <data name="ErrorInvalidSettingsStr" xml:space="preserve">
+    <value>Le impostazioni nvan bene</value>
+  </data>
+  <data name="ErrorInvalidValsShortStr" xml:space="preserve">
+    <value>I valori nvan bene</value>
+  </data>
+  <data name="ErrorsCreatingChannelsStr" xml:space="preserve">
+    <value>è successo npò de casino a creà I canali</value>
+  </data>
+  <data name="ErrorUnableToCreateDirShortStr" xml:space="preserve">
+    <value>Nse pole creà la cartella</value>
+  </data>
+  <data name="ErrorUnableToCreateTempDirStr" xml:space="preserve">
+    <value>Nse pole creà la cartella temp</value>
+  </data>
+  <data name="NewUpdateAvailableStr" xml:space="preserve">
+    <value>Ce sta n aggiornamento novo!</value>
+  </data>
+  <data name="ParitionOptionRemoveUpdateStr" xml:space="preserve">
+    <value>Toglie la partizione d'aggiornamento, mantiene l resto</value>
+  </data>
+  <data name="PartitionOptionAllPartStr" xml:space="preserve">
+    <value>Tutte le partizioni</value>
+  </data>
+  <data name="PartitonOptionOnlyGameStr" xml:space="preserve">
+    <value>Solo la partizione Gioco</value>
+  </data>
+  <data name="ProgressCancellingText" xml:space="preserve">
+    <value>L'operazione cancellerà quando l'oggetto de adesso ha finito</value>
+  </data>
+  <data name="SaveWadFileAsStr" xml:space="preserve">
+    <value>Salva l fail WAD come...</value>
+  </data>
+  <data name="SelectBaseWadStr" xml:space="preserve">
+    <value>Sceglie la WAD de base</value>
+  </data>
+  <data name="SelectCommonKeyFileStr" xml:space="preserve">
+    <value>Sceglie l common key fail</value>
+  </data>
+  <data name="SelectLoaderDolFileStr" xml:space="preserve">
+    <value>Sceglie l fail DOL dell'USB Loader</value>
+  </data>
+  <data name="SelectWadOutputFolderStr" xml:space="preserve">
+    <value>Sceglie na cartella do arloca I fail WAD pei canali</value>
+  </data>
+  <data name="CompletedExportingListStr" xml:space="preserve">
+    <value>Ho fenuto de armette la lista tal fail</value>
+  </data>
+  <data name="NoUpdatesAvailableShortStr" xml:space="preserve">
+    <value>Nce stanno aggiornamenti</value>
+  </data>
+  <data name="NoUpdatesAvailableStr" xml:space="preserve">
+    <value>Adè nce stanno aggiornamenti</value>
+  </data>
+</root>

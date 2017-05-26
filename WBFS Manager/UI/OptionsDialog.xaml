@@ -1,0 +1,166 @@
+﻿<Window x:Class="WBFSManager.UI.OptionsDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Width="400"
+    Title="Options..." Name="OptionsDialogInstance"  Icon="../Content/WBFSManagerNew.png" SizeToContent="Height" ShowInTaskbar="False" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Closing="Window_Closing" SnapsToDevicePixels="True">
+    <DockPanel LastChildFill="True">
+        <Grid DockPanel.Dock="Bottom" HorizontalAlignment="Right">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" MinWidth="100" Margin="3" IsDefault="True" Name="OkButton" Click="OkButton_Click"  Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=OkButtonText}"></Button>
+            <Button Grid.Column="1" MinWidth="100" Margin="3" IsCancel="True" Name="CancelButton" Click="CancelButton_Click"  Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=CancelButtonText}"></Button>
+        </Grid>
+        <TabControl TabStripPlacement="Top" DockPanel.Dock="Top">
+            <TabItem Header="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=BasicSettingsText}" SnapsToDevicePixels="False">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <StackPanel Orientation="Vertical" Margin="1" Grid.Row="0">
+                        <Label HorizontalContentAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=InitialSettingsText}" Visibility="Visible"></Label>
+                    </StackPanel>
+                    <Grid Grid.Column="0" Grid.Row="1">
+                        <StackPanel Orientation="Vertical" Grid.Row="1">
+
+                            <StackPanel Orientation="Horizontal" Margin="3">
+                                <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=ShowCoversText}"></Label>
+                                <CheckBox VerticalAlignment="Center" Name="ShowCoversCheckBox" IsChecked="{Binding ElementName=OptionsDialogInstance,Path=ShowCovers,Mode=TwoWay}"></CheckBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="3">
+                                <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=DownloadCoversFromWebText}"></Label>
+                                <CheckBox VerticalAlignment="Center" Name="DownloadFromWebCheckBox" IsChecked="{Binding ElementName=OptionsDialogInstance,Path=DownloadFromWeb,Mode=TwoWay}"></CheckBox>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="3">
+                                <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=AutomaticallyCheckForUpdatesText}"></Label>
+                                <CheckBox VerticalAlignment="Center" Name="EnableAutomaticUpdatesCheckBox" IsChecked="{Binding ElementName=OptionsDialogInstance,Path=AutomaticUpdateChecks,Mode=TwoWay}"></CheckBox>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="3">
+
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=TempFolderText}" Grid.Row="0" Grid.ColumnSpan="2"></Label>
+                                    <TextBox Name="TempFolderPathTextBox" Grid.Column="0" Grid.Row="1" Text="{Binding ElementName=OptionsDialogInstance,Path=TempDirectory}"></TextBox>
+                                    <Button Name="BrowseButton" Grid.Column="1" Grid.Row="1" Click="BrowseButton_Click" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=BrowseText}"></Button>
+                                </Grid>
+                            </StackPanel>
+                            
+
+                        </StackPanel>
+                    </Grid>
+
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=ChannelCreationSettingsText}">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="3">
+                            <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=EnableChannelCreationText}"></Label>
+                            <CheckBox Name="EnableChannelCreationCheckBox" VerticalAlignment="Center" IsChecked="{Binding ElementName=OptionsDialogInstance,Path=EnableChannelCreation,Mode=TwoWay}"></CheckBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="3" IsEnabled="{Binding ElementName=EnableChannelCreationCheckBox,Path=IsChecked}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.ColumnSpan="2" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=SrcWadFileText}"></Label>
+                                <TextBox Name="SrWadFileTextBox" Grid.Row="1" Text="{Binding ElementName=OptionsDialogInstance,Path=SrcWadFile}"></TextBox>
+                                <Button Name="SrWadFileBrowseButton" Grid.Column="1" Grid.Row="1" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=BrowseText}" Click="WadBrowseButton_Click"></Button>
+                            </Grid>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="3" IsEnabled="{Binding ElementName=EnableChannelCreationCheckBox,Path=IsChecked}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Grid.ColumnSpan="2" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=KeyFileText}"></Label>
+                                <TextBox Name="KeyFileTextBox" Grid.Row="1" Text="{Binding ElementName=OptionsDialogInstance,Path=KeyFile}"></TextBox>
+                                <Button Name="KeyBrowseButton" Grid.Column="1" Grid.Row="1" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=BrowseText}" Click="KeyBrowseButton_Click"></Button>
+                            </Grid>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="3" IsEnabled="{Binding ElementName=EnableChannelCreationCheckBox,Path=IsChecked}">
+                            <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=BootloaderPresetText}"></Label>
+                            <ComboBox Name="xmlPresetComboBox" SelectionChanged="xmlPresetComboBox_SelectionChanged"></ComboBox>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Margin="3" IsEnabled="{Binding ElementName=EnableChannelCreationCheckBox,Path=IsChecked}">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Row="0" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=LoaderFileText}"></Label>
+                                <TextBox Name="DolFileTextBox" Grid.Row="1" Grid.Column="0" Text="{Binding ElementName=OptionsDialogInstance,Path=LoaderFile}"></TextBox>
+                                <Button Name="DolBrowseButton" Grid.Row="1" Grid.Column="1" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=BrowseText}" Click="DolBrowseButton_Click"></Button>
+                            </Grid>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" IsEnabled="{Binding ElementName=EnableChannelCreationCheckBox,Path=IsChecked}" Margin="3">
+                            <Label  Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=OriginalTitleIDText}">
+                                <!--Loader Original Title ID (6 letters):-->
+                            </Label>
+                            <TextBox Name="origTitIDTextBox" Text="{Binding ElementName=OptionsDialogInstance,Path=OriginalTitleId,Mode=TwoWay}"></TextBox>
+                        </StackPanel>
+                    </StackPanel>
+            </TabItem>
+            <TabItem Header="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=AdvancedSettingsText}">
+                <StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="3">
+                        <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=EnableRarExtractionText}"></Label>
+                        <CheckBox VerticalAlignment="Center" Name="EnableRarExtractionCheckBox" IsChecked="{Binding ElementName=OptionsDialogInstance,Path=EnableRarExtraction,Mode=TwoWay}"></CheckBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="3">
+                        <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=PartitionsToKeepText}"></Label>
+                        <ComboBox Name="PartitionsToUseComboBox"></ComboBox>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" Margin="3">
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Label Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=CoverDirsText}" Grid.Row="0" Grid.ColumnSpan="3"></Label>
+                            <ListBox Grid.Row="1" Grid.ColumnSpan="3" SelectionMode="Extended" Name="CoverDirsListBox" ItemsSource="{Binding ElementName=OptionsDialogInstance,Path=CoverDirs}"></ListBox>
+                            <Button Grid.Column="0" Grid.Row="2" Name="AddButton" Click="AddButton_Click" Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=AddText}"></Button>
+                            <Button Grid.Column="1" Grid.Row="2" Name="RemoveButton" Click="RemoveButton_Click"  Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=RemoveText}"></Button>
+                            <Button Grid.Column="2" Grid.Row="2" Name="ClearButton" Click="ClearButton_Click"  Content="{Resx ResxName=WBFSManager.UI.Localization.OptionsDialog.OptionsDialogR, Key=ClearText}"></Button>
+                        </Grid>
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+
+
+
+        </TabControl>
+    </DockPanel>
+</Window>

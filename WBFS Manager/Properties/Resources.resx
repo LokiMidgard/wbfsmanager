@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CompletedAddingShortStr" xml:space="preserve">
+    <value>Completed Adding.</value>
+  </data>
+  <data name="CompletedAddingStr" xml:space="preserve">
+    <value>Completed adding entries to WBFS drive.</value>
+  </data>
+  <data name="CompletedExtractShortStr" xml:space="preserve">
+    <value>Extraction completed.</value>
+  </data>
+  <data name="CompletedExtractStr" xml:space="preserve">
+    <value>Completed extraction from WBFS drive.</value>
+  </data>
+  <data name="ErrorAddExistsStr" xml:space="preserve">
+    <value>. The disc already exists on the WBFS drive.</value>
+  </data>
+  <data name="ErrorAddingNoDriveShortStr" xml:space="preserve">
+    <value>Error adding disc.</value>
+  </data>
+  <data name="ErrorAddingNoDriveStr" xml:space="preserve">
+    <value>Error occurred while adding disc to WBFS drive.  Could not access drive.</value>
+  </data>
+  <data name="ErrorAddingShortStr" xml:space="preserve">
+    <value>Error Reading Files</value>
+  </data>
+  <data name="ErrorAddingStr" xml:space="preserve">
+    <value>Error occurred while adding files to Games to Add list. Try selecting less folders.</value>
+  </data>
+  <data name="ErrorAddLoadingStr" xml:space="preserve">
+    <value>. An error occurred while loading the WBFS drive.</value>
+  </data>
+  <data name="ErrorAddReadStr" xml:space="preserve">
+    <value>. An error occurred while attempting to read the image file from disk.</value>
+  </data>
+  <data name="ErrorDeleteNotFoundStr" xml:space="preserve">
+    <value>Game disc could not be found on WBFS drive.</value>
+  </data>
+  <data name="ErrorDeleteShortStr" xml:space="preserve">
+    <value>Error removing game</value>
+  </data>
+  <data name="ErrorDeleteStr" xml:space="preserve">
+    <value>Error occurred while removing game:</value>
+  </data>
+  <data name="ErrorEstimateLoadingDriveStr" xml:space="preserve">
+    <value>An error occurred while loading the WBFS drive.</value>
+  </data>
+  <data name="ErrorEstimateReadingImageStr" xml:space="preserve">
+    <value>An error occurred while attempting to read the image file from disk.</value>
+  </data>
+  <data name="ErrorEstimatingShortStr" xml:space="preserve">
+    <value>Error estimating game size.</value>
+  </data>
+  <data name="ErrorEstimatingStr" xml:space="preserve">
+    <value>Error estimating:</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesShortStr" xml:space="preserve">
+    <value>No entries exist.</value>
+  </data>
+  <data name="ErrorExtractingNoEntriesStr" xml:space="preserve">
+    <value>No entries exist on drive to extract iso from.</value>
+  </data>
+  <data name="ErrorExtractingP1ShortStr" xml:space="preserve">
+    <value>Error extracting game.</value>
+  </data>
+  <data name="ErrorExtractingP1Str" xml:space="preserve">
+    <value>Error occurred while extracting</value>
+  </data>
+  <data name="ErrorExtractingShortStr" xml:space="preserve">
+    <value>Error extracting disc.</value>
+  </data>
+  <data name="ErrorExtractingStr" xml:space="preserve">
+    <value>Error occurred while extracting disc from drive.  Could not access drive.</value>
+  </data>
+  <data name="ErrorExtrLoadingStr" xml:space="preserve">
+    <value>. An error occurred while loading the WBFS drive.</value>
+  </data>
+  <data name="ErrorExtrNoDriveStr" xml:space="preserve">
+    <value>. Unable to open file on WBFS drive for writing.</value>
+  </data>
+  <data name="ErrorExtrNoGameStr" xml:space="preserve">
+    <value>. The game disc could not be found on the WBFS drive.</value>
+  </data>
+  <data name="ErrorFormatInvalidShortStr" xml:space="preserve">
+    <value>Invalid Drive Letter.</value>
+  </data>
+  <data name="ErrorFormatInvalidStr" xml:space="preserve">
+    <value>Invalid drive letter selected for formatting.</value>
+  </data>
+  <data name="ErrorFormatShortStr" xml:space="preserve">
+    <value>Error formatting</value>
+  </data>
+  <data name="ErrorFormatStr" xml:space="preserve">
+    <value>An error occurred while attempting to format the drive.</value>
+  </data>
+  <data name="ErrorLoadingDriveShortStr" xml:space="preserve">
+    <value>Error loading drive</value>
+  </data>
+  <data name="ErrorLoadingDriveStr" xml:space="preserve">
+    <value>Error occurred while loading drive. Make sure the drive is not in use or open and that it has been formatted to WBFS format.</value>
+  </data>
+  <data name="ErrorReadingDriveStatsShortStr" xml:space="preserve">
+    <value>Error reading drive statistics.</value>
+  </data>
+  <data name="ErrorReadingDriveStatsStr" xml:space="preserve">
+    <value>Error occurred while reading drive statistics. Could not access drive.</value>
+  </data>
+  <data name="ErrorReadingISOShortStr" xml:space="preserve">
+    <value>Error reading ISO info.</value>
+  </data>
+  <data name="ErrorReadingISOStr" xml:space="preserve">
+    <value>Error occurred while reading ISO info.  Could not access drive.</value>
+  </data>
+  <data name="ErrorRenameCantLoadStr" xml:space="preserve">
+    <value>Could not load game.</value>
+  </data>
+  <data name="ErrorRenameInvalidShortStr" xml:space="preserve">
+    <value>Invalid Name.</value>
+  </data>
+  <data name="ErrorRenameInvalidStr" xml:space="preserve">
+    <value>Invalid name specified. Name must be between 0 and 57 characters long.</value>
+  </data>
+  <data name="ErrorRenameShortStr" xml:space="preserve">
+    <value>Error Renaming Disc</value>
+  </data>
+  <data name="ErrorRenameStr" xml:space="preserve">
+    <value>Error occurred while renaming the disc.</value>
+  </data>
+  <data name="ErrorWhileAddingShortStr" xml:space="preserve">
+    <value>Error adding game.</value>
+  </data>
+  <data name="ErrorWhileAddingStr" xml:space="preserve">
+    <value>Error occurred while adding:</value>
+  </data>
+  <data name="NoDrivesDetectedShortStr" xml:space="preserve">
+    <value>No drives detected.</value>
+  </data>
+  <data name="UnableToDetectDrivesStr" xml:space="preserve">
+    <value>Unable to detect any disk drives. Exiting WBFS Manager.</value>
+  </data>
+  <data name="CopyProgressStr" xml:space="preserve">
+    <value>Copy Progress</value>
+  </data>
+  <data name="ExtractionProgressStr" xml:space="preserve">
+    <value>Extraction Progress</value>
+  </data>
+  <data name="FormatWarningP1Str" xml:space="preserve">
+    <value>WARNING: This will delete all data on the selected partition (</value>
+  </data>
+  <data name="FormatWarningP2Str" xml:space="preserve">
+    <value>). Data will not be recoverable. The developer will not be held responsible for any data loss caused by accidental formatting. DO NOT REMOVE THE DRIVE WHILE FORMATTING!</value>
+  </data>
+  <data name="FormatWarningShortStr" xml:space="preserve">
+    <value>WARNING</value>
+  </data>
+  <data name="MustSelectEntryToRemoveShortStr" xml:space="preserve">
+    <value>No entry selected</value>
+  </data>
+  <data name="MustSelectEntryToRenameShortStr" xml:space="preserve">
+    <value>No entry selected</value>
+  </data>
+  <data name="NoDriveSelectedShortStr" xml:space="preserve">
+    <value>No drive selected.</value>
+  </data>
+  <data name="NoDriveSelectedStr" xml:space="preserve">
+    <value>No drive selected to add games to.</value>
+  </data>
+  <data name="NoIsoSelectedToAddShortStr" xml:space="preserve">
+    <value>No isos selected.</value>
+  </data>
+  <data name="NoIsoSelectedToAddStr" xml:space="preserve">
+    <value>No isos selected to be added, use the browse button to add the isos to the Add list first.</value>
+  </data>
+  <data name="SelectImageToAddStr" xml:space="preserve">
+    <value>Select an image file to add:</value>
+  </data>
+  <data name="SelectLocationExtractStr" xml:space="preserve">
+    <value>Select a location and name to store the ISO image as:</value>
+  </data>
+  <data name="MustSelectExistingFolderShortStr" xml:space="preserve">
+    <value>Invalid folder.</value>
+  </data>
+  <data name="MustSelectExistingFolderStr" xml:space="preserve">
+    <value>You must select an existing folder.</value>
+  </data>
+  <data name="SelectCoversDirStr" xml:space="preserve">
+    <value>Select the Covers directory:</value>
+  </data>
+  <data name="MetaXmlShortDescStr" xml:space="preserve">
+    <value> on USB HDD</value>
+  </data>
+  <data name="ErrorCreatingHBCShortStr" xml:space="preserve">
+    <value>Error Creating HBC Entry</value>
+  </data>
+  <data name="ErrorCreatingHBCStr" xml:space="preserve">
+    <value>Error creating HBC entry, missing the .dol file.</value>
+  </data>
+  <data name="SelectDirForHBCStr" xml:space="preserve">
+    <value>Select a directory to save to:</value>
+  </data>
+  <data name="DownloadFromWebPromptShortText" xml:space="preserve">
+    <value>Download Covers?</value>
+  </data>
+  <data name="DownloadFromWebPromptText" xml:space="preserve">
+    <value>Would you like to enable downloading covers from the web? (You can change this setting later in the Edit menu.)</value>
+  </data>
+  <data name="ConfirmDeleteShortStr" xml:space="preserve">
+    <value>Remove?</value>
+  </data>
+  <data name="ConfirmDeleteStr" xml:space="preserve">
+    <value>Are you sure you want to remove </value>
+  </data>
+  <data name="SaveGameListAsStr" xml:space="preserve">
+    <value>Save game list as:</value>
+  </data>
+  <data name="ErrorReadingSomeIsosStr" xml:space="preserve">
+    <value>Error(s) occurred while reading some of the ISO files.</value>
+  </data>
+  <data name="ReadingFilesText" xml:space="preserve">
+    <value>Reading Files</value>
+  </data>
+  <data name="ErrorOccuredExtractingStr" xml:space="preserve">
+    <value>Errors occurred while extracting some games. Hover your mouse over the error icon next to each game to read the error.</value>
+  </data>
+  <data name="ErrorsOccuredExtractingShortStr" xml:space="preserve">
+    <value>Errors occurred while extracting.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingStr" xml:space="preserve">
+    <value>Errors occurred while adding some games. Hover your mouse over the error icon next to each game to read the error.</value>
+  </data>
+  <data name="ErrorsOccuredWhileAddingShortStr" xml:space="preserve">
+    <value>Errors occurred while adding.</value>
+  </data>
+  <data name="SelectDirectoryToExtractToStr" xml:space="preserve">
+    <value>Select a directory to extract the ISO files to:</value>
+  </data>
+  <data name="ErrorInvalidFolderStr" xml:space="preserve">
+    <value>Invalid folder selected, select a different folder.</value>
+  </data>
+  <data name="ErrorInvalidFolderShortStr" xml:space="preserve">
+    <value>Invalid folder</value>
+  </data>
+  <data name="FormatSuccessfulStr" xml:space="preserve">
+    <value>Format completed successfully. The WBFS drive is now ready.</value>
+  </data>
+  <data name="FormatSuccessfulShortStr" xml:space="preserve">
+    <value>Format Successful</value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceDriveStr" xml:space="preserve">
+    <value>No entries exist on source drive.</value>
+  </data>
+  <data name="ErrorNoSecondaryDriveLoadedStr" xml:space="preserve">
+    <value>No secondary drive loaded to copy games to.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceToCloneStr" xml:space="preserve">
+    <value>Not enough free space on secondary drive to clone the source drive.</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceShortStr" xml:space="preserve">
+    <value>Not Enough Space</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceTempFolderStr" xml:space="preserve">
+    <value>Not enough free space in temporary folder, choose a different temporary folder with at least 4.8 GB free.</value>
+  </data>
+  <data name="ErrorNoEntriesOnSourceNonSelectedStr" xml:space="preserve">
+    <value>No entries exist on source drive or none were selected.</value>
+  </data>
+  <data name="DriveToDriveProgressStr" xml:space="preserve">
+    <value>Drive-To-Drive Transfer Progress</value>
+  </data>
+  <data name="ErrorNotEnoughSpaceLowerStr" xml:space="preserve">
+    <value>, not enough space.</value>
+  </data>
+  <data name="ErrorOccuredWhileTransStr" xml:space="preserve">
+    <value>Error occurred while transferring: </value>
+  </data>
+  <data name="ErrorOccuredWhileTransShortStr" xml:space="preserve">
+    <value>Error Transferring</value>
+  </data>
+  <data name="ErrorFollowingWhileTransStr" xml:space="preserve">
+    <value>The following errors occurred while transferring: </value>
+  </data>
+  <data name="ErrorsTransShortStr" xml:space="preserve">
+    <value>Errors Transferring</value>
+  </data>
+  <data name="ErrorRARMissingVolP1Str" xml:space="preserve">
+    <value>Missing volume: </value>
+  </data>
+  <data name="ErrorRarMissingVolP2Str" xml:space="preserve">
+    <value> from RAR set for file: </value>
+  </data>
+  <data name="ErrorRarMissingVolShortStr" xml:space="preserve">
+    <value>Missing Volume</value>
+  </data>
+  <data name="ErrorRarPassReqdStr" xml:space="preserve">
+    <value>Password required for: </value>
+  </data>
+  <data name="ErrorRarPassReqdShortStr" xml:space="preserve">
+    <value>Password Required</value>
+  </data>
+  <data name="ErrorExtractingRARShortStr" xml:space="preserve">
+    <value>Error extracting RAR</value>
+  </data>
+  <data name="ChooseTempFolderText" xml:space="preserve">
+    <value>Choose a temporary folder:</value>
+  </data>
+  <data name="MustSelectValidFolderText" xml:space="preserve">
+    <value>Must select a valid temporary folder.</value>
+  </data>
+  <data name="InvalidTempFolderStr" xml:space="preserve">
+    <value>Invalid Temporary Folder</value>
+  </data>
+  <data name="WarningNotEnoughSpaceTempStr" xml:space="preserve">
+    <value>The selected temporary folder does not have enough available free space, if you do not choose a different drive with at least 4.8 GB free you may experince problems extracting RAR archives.</value>
+  </data>
+  <data name="FormatWarningP3Str" xml:space="preserve">
+    <value>Are you sure you want to format drive </value>
+  </data>
+  <data name="ErrorFormatClosingDriveStr" xml:space="preserve">
+    <value>An error occurred while attempting to close the drive.</value>
+    <comment>ErrorFormatClosingDriveStr description</comment>
+  </data>
+  <data name="ErrorIncorrectVersionStr" xml:space="preserve">
+    <value>This version of WBFS Manager is not compatible with your operating system. If you are using a 64-bit operating system, please install the 64-bit version of WBFS Manager (x64).</value>
+    <comment>ErrorIncorrectVersionStr description</comment>
+  </data>
+  <data name="ErrorIncorrectVersionShortStr" xml:space="preserve">
+    <value>Incorrect version</value>
+    <comment>ErrorIncorrectVersionShortStr description</comment>
+  </data>
+  <data name="ProgressCancellingText" xml:space="preserve">
+    <value>Operation will cancel when the current item has finished.</value>
+    <comment>ProgressCancellingText description</comment>
+  </data>
+  <data name="ErrorUnableToCreateTempDirStr" xml:space="preserve">
+    <value>Unable to create temp directory: </value>
+    <comment>ErrorUnableToCreateTempDir description</comment>
+  </data>
+  <data name="ErrorUnableToCreateDirShortStr" xml:space="preserve">
+    <value>Unable to create directory</value>
+    <comment>ErrorUnableToCreateDirShortStr description</comment>
+  </data>
+  <data name="ErrorInvalidChanCreationValsStr" xml:space="preserve">
+    <value>Invalid values for channel creation settings.</value>
+    <comment>ErrorInvalidChanCreationValsStr description</comment>
+  </data>
+  <data name="ErrorInvalidValsShortStr" xml:space="preserve">
+    <value>Invalid values</value>
+    <comment>ErrorInvalidValsShortStr description</comment>
+  </data>
+  <data name="ErrorInvalidPartitionSettingStr" xml:space="preserve">
+    <value>Invalid partiiton setting selected.</value>
+    <comment>ErrorInvalidPartitionSettingStr description</comment>
+  </data>
+  <data name="SelectBaseWadStr" xml:space="preserve">
+    <value>Select the base wad:</value>
+    <comment>SelectBaseWadStr description</comment>
+  </data>
+  <data name="ErrorInvalidBaseWadFilenameStr" xml:space="preserve">
+    <value>Invalid base WAD filename, file does not exist.</value>
+    <comment>ErrorInvalidBaseWadFilenameStr description</comment>
+  </data>
+  <data name="ErrorInvalidFilename" xml:space="preserve">
+    <value>Invalid filename</value>
+    <comment>ErrorInvalidFilename description</comment>
+  </data>
+  <data name="SelectCommonKeyFileStr" xml:space="preserve">
+    <value>Select the common key file:</value>
+    <comment>SelectCommonKeyFileStr description</comment>
+  </data>
+  <data name="ErrorInvalidCommonKeyFilenameStr" xml:space="preserve">
+    <value>Invalid common key filename, file does not exist.</value>
+    <comment>ErrorInvalidCommonKeyFilenameStr description</comment>
+  </data>
+  <data name="SelectLoaderDolFileStr" xml:space="preserve">
+    <value>Select the USB loader DOL file:</value>
+    <comment>SelectLoaderDolFileStr description</comment>
+  </data>
+  <data name="ErrorInvalidDolFilenameStr" xml:space="preserve">
+    <value>Invalid USB Loader .dol filename, file does not exist.</value>
+    <comment>ErrorInvalidDolFilenameStr description</comment>
+  </data>
+  <data name="PartitonOptionOnlyGameStr" xml:space="preserve">
+    <value>Only Game Partition</value>
+    <comment>PartitonOptionOnlyGameStr description</comment>
+  </data>
+  <data name="ParitionOptionRemoveUpdateStr" xml:space="preserve">
+    <value>Remove Update Partition, Keep Rest</value>
+    <comment>ParitionOptionRemoveUpdateStr description</comment>
+  </data>
+  <data name="PartitionOptionAllPartStr" xml:space="preserve">
+    <value>All Partitions</value>
+    <comment>PartitionOptionAllPartStr description</comment>
+  </data>
+  <data name="NewUpdateAvailableStr" xml:space="preserve">
+    <value>A new update is available.</value>
+    <comment>NewUpdateAvailableStr description</comment>
+  </data>
+  <data name="CompletedHBCEntryStr" xml:space="preserve">
+    <value>Completed Hombrew Channel entry creation.</value>
+    <comment>CompletedHBCEntryStr description</comment>
+  </data>
+  <data name="CompletedStr" xml:space="preserve">
+    <value>Completed</value>
+    <comment>CompletedStr description</comment>
+  </data>
+  <data name="ErrorInvalidChannelSettingsFixStr" xml:space="preserve">
+    <value>Invalid channel creation settings. Please fix the settings in the Options menu.</value>
+    <comment>ErrorInvalidChannelSettingsFixStr description</comment>
+  </data>
+  <data name="ErrorInvalidSettingsStr" xml:space="preserve">
+    <value>Invalid settings.</value>
+    <comment>ErrorInvalidSettingsStr description</comment>
+  </data>
+  <data name="ErrorInvalidChanIdOrOutFileStr" xml:space="preserve">
+    <value>Invalid channel ID or output filename.</value>
+    <comment>ErrorInvalidChanIdOrOutFileStr description</comment>
+  </data>
+  <data name="CompletedChannelCreationSuccessStr" xml:space="preserve">
+    <value>Channel creation completed successfully</value>
+    <comment>CompletedChannelCreationSuccessStr description</comment>
+  </data>
+  <data name="CompletedChanCreationSuccessShortStr" xml:space="preserve">
+    <value>Channel creation successful</value>
+    <comment>CompletedChanCreationSuccessShortStr description</comment>
+  </data>
+  <data name="SelectWadOutputFolderStr" xml:space="preserve">
+    <value>Select a folder to save the WAD files for the Channels in:</value>
+    <comment>SelectWadOutputFolderStr description</comment>
+  </data>
+  <data name="CreatingChannelsProgressText" xml:space="preserve">
+    <value>Creating channels...</value>
+    <comment>CreatingChannelsProgressText description</comment>
+  </data>
+  <data name="ErrorsCreatingChannelsStr" xml:space="preserve">
+    <value>Errors occurred creating channels</value>
+    <comment>ErrorsCreatingChannelsStr description</comment>
+  </data>
+  <data name="ChannCreationCompleteStr" xml:space="preserve">
+    <value>Channel creation completed.</value>
+    <comment>ChannCreationCompleteStr description</comment>
+  </data>
+  <data name="ErrorEmptyEntryListStr" xml:space="preserve">
+    <value>List of entries to create channels for is empty.</value>
+    <comment>ErrorEmptyEntryListStr description</comment>
+  </data>
+  <data name="ErrorEmptyEntryListShortStr" xml:space="preserve">
+    <value>Empty entry list</value>
+    <comment>ErrorEmptyEntryListShortStr description</comment>
+  </data>
+  <data name="ErrorInvalidIsoPathStr" xml:space="preserve">
+    <value>Invalid ISO file path.</value>
+    <comment>ErrorInvalidIsoPathStr description</comment>
+  </data>
+  <data name="ErrorInvalidIsoPathShortStr" xml:space="preserve">
+    <value>Invalid ISO path</value>
+    <comment>ErrorInvalidIsoPathShortStr description</comment>
+  </data>
+  <data name="ErrorCreatingChannelErrCodeStr" xml:space="preserve">
+    <value>Error occurred while creating channel. (Error code </value>
+    <comment>ErrorCreatingChannelErrCodeStr description</comment>
+  </data>
+  <data name="ErrorCreatinChanSingleStr" xml:space="preserve">
+    <value>Error creating channel</value>
+    <comment>ErrorCreatinChanSingleStr description</comment>
+  </data>
+  <data name="ErrorInvalidIsoPathForStr" xml:space="preserve">
+    <value>Invalid ISO file path for </value>
+    <comment>ErrorInvalidIsoPathForStr description</comment>
+  </data>
+  <data name="ErrorCreatingChanForStr" xml:space="preserve">
+    <value>Error occurred while creating channel for </value>
+    <comment>ErrorCreatingChanForStr description</comment>
+  </data>
+  <data name="ErrorCodeStr" xml:space="preserve">
+    <value> (Error code </value>
+    <comment>ErrorCodeStr description</comment>
+  </data>
+  <data name="SaveWadFileAsStr" xml:space="preserve">
+    <value>Save the WAD file as...</value>
+    <comment>SaveWadFileAsStr description</comment>
+  </data>
+  <data name="ErrorInvalidOuputWadFilenameStr" xml:space="preserve">
+    <value>Invalid output WAD filename.</value>
+    <comment>ErrorInvalidOuputWadFilenameStr description</comment>
+  </data>
+  <data name="ErrorChanIdMustBeFourStr" xml:space="preserve">
+    <value>Channel ID must be exactly 4 characters.</value>
+    <comment>ErrorChanIdMustBeFourStr description</comment>
+  </data>
+  <data name="ErrorInvalidChanIdStr" xml:space="preserve">
+    <value>Invalid channel ID</value>
+    <comment>ErrorInvalidChanId description</comment>
+  </data>
+  <data name="CompletedExportingListStr" xml:space="preserve">
+    <value>Completed exporting list to file.</value>
+    <comment>CompletedExportingListStr description</comment>
+  </data>
+  <data name="NoUpdatesAvailableStr" xml:space="preserve">
+    <value>No updates are currently available.</value>
+    <comment>NoUpdatesAvailableStr description</comment>
+  </data>
+  <data name="NoUpdatesAvailableShortStr" xml:space="preserve">
+    <value>No updates available</value>
+    <comment>NoUpdatesAvailableShortStr description</comment>
+  </data>
+  <data name="MetaXmlLongDescStr" xml:space="preserve">
+    <value>This launches a wbfs game loader for </value>
+  </data>
+  <data name="MustSelectEntryToRemoveStr" xml:space="preserve">
+    <value>You must select a single entry to remove.</value>
+  </data>
+  <data name="MustSelectEntryToRenameStr" xml:space="preserve">
+    <value>You must select a single entry to rename.</value>
+  </data>
+</root>

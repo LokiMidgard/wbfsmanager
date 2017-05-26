@@ -1,0 +1,519 @@
+﻿<Window x:Uid="MainWindowInstance" x:Class="WBFSManager.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Commands="clr-namespace:WBFSManager.UI.Commands" xml:lang="en-US"
+    Title="WBFS Manager 3.0" Height="557" Width="1024" Loaded="Window_Loaded" Name="MainWindowInstance" Icon="../Content/WBFSManagerNew.png" WindowStartupLocation="CenterScreen" MinWidth="976" MinHeight="522" Closed="MainWindowInstance_Closed" SnapsToDevicePixels="True">
+    <Window.CommandBindings>
+        <CommandBinding x:Uid="ExitCommandBinding" x:Name="ExitCommandBinding" Command="Commands:UICommands.Exit" Executed="ExitCommandBinding_Executed" CanExecute="ExitCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="LoadDriveCommandBinding" x:Name="LoadDriveCommandBinding" Command="Commands:UICommands.LoadDrive" Executed="LoadDriveCommandBinding_Executed" CanExecute="LoadDriveCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="ExtractCommandBinding" x:Name="ExtractCommandBinding" Command="Commands:UICommands.Extract" Executed="ExtractCommandBinding_Executed" CanExecute="ExtractCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="AddCommandBinding" x:Name="AddCommandBinding" Command="Commands:UICommands.AddToDrive" Executed="AddCommandBinding_Executed" CanExecute="AddCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="DeleteCommandBinding" x:Name="DeleteCommandBinding" Command="Commands:UICommands.RemoveFromDrive" Executed="DeleteCommandBinding_Executed" CanExecute="DeleteCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="RemoveCommandBinding" x:Name="RemoveCommandBinding" Command="Commands:UICommands.RemoveFromList" Executed="RemoveCommandBinding_Executed" CanExecute="RemoveCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="BrowseCommandBinding" x:Name="BrowseCommandBinding" Command="Commands:UICommands.Browse" Executed="BrowseCommandBinding_Executed" CanExecute="BrowseCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="ClearCommandBinding" x:Name="ClearCommandBinding" Command="Commands:UICommands.ClearList" Executed="ClearCommandBinding_Executed" CanExecute="ClearCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="FormatCommandBinding" x:Name="FormatCommandBinding" Command="Commands:UICommands.Format" Executed="FormatCommandBinding_Executed" CanExecute="FormatCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="RenameOnAddCommandBinding" x:Name="RenameOnAddCommandBinding" Command="Commands:UICommands.RenameOnAdd" Executed="RenameOnAddCommandBinding_Executed" CanExecute="RenameOnAddCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="RenameOnDriveCommandBinding" x:Name="RenameOnDriveCommandBinding" Command="Commands:UICommands.RenameOnDrive" Executed="RenameOnDriveCommandBinding_Executed" CanExecute="RenameOnDriveCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="SortByNameCommandBinding" x:Name="SortByNameCommandBinding" Command="Commands:UICommands.SortByName" Executed="SortByNameCommandBinding_Executed" CanExecute="SortByNameCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="SortByIdCommandBinding" x:Name="SortByIdCommandBinding" Command="Commands:UICommands.SortById" Executed="SortByIdCommandBinding_Executed" CanExecute="SortByIdCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="SortBySizeCommandBinding" x:Name="SortBySizeCommandBinding" Command="Commands:UICommands.SortBySize" Executed="SortBySizeCommandBinding_Executed" CanExecute="SortBySizeCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="SortByStatusCommandBinding" x:Name="SortByStatusCommandBinding" Command="Commands:UICommands.SortByStatus" Executed="SortByStatusCommandBinding_Executed" CanExecute="SortByStatusCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="SortByIndexCommandBinding" x:Name="SortByIndexCommandBinding" Command="Commands:UICommands.SortByIndex" Executed="SortByIndexCommandBinding_Executed" CanExecute="SortByIndexCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="SortByFilePathCommandBinding" x:Name="SortByFilePathCommandBinding" Command="Commands:UICommands.SortByFilePath" Executed="SortByFilePathCommandBinding_Executed" CanExecute="SortByFilePathCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="ShowOptionsCommandBinding" x:Name="ShowOptionsCommandBinding" Command="Commands:UICommands.ShowOptions" Executed="ShowOptionsCommandBinding_Executed" CanExecute="ShowOptionsCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="ShowCoversCommandBinding" x:Name="ShowCoversCommandBinding" Command="Commands:UICommands.ShowCovers" Executed="ShowCoversCommandBinding_Executed" CanExecute="ShowCoversCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="MakeSingleHBCCommandBinding" x:Name="MakeSingleHBCCommandBinding" Command="Commands:UICommands.MakeSingleHBC" Executed="MakeSingleHBCCommandBinding_Executed" CanExecute="MakeSingleHBCCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="MakeAllHBCCommandBinding" x:Name="MakeAllHBCCommandBinding" Command="Commands:UICommands.MakeAllHBC" Executed="MakeAllHBCCommandBinding_Executed" CanExecute="MakeAllHBCCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="CreateChannelCommandBinding" x:Name="CreateChannelCommandBinding" Command="Commands:UICommands.CreateChannel" Executed="CreateChannelCommandBinding_Executed" CanExecute="CreateChannelCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="ChangeLanguageCommandBinding" x:Name="ChangeLanguageCommandBinding" Command="Commands:UICommands.ChangeLanguage" Executed="ChangeLanguageCommandBinding_Executed" CanExecute="ChangeLanguageCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="CheckForUpdatesCommandBinding" x:Name="CheckForUpdatesCommandBinding" Command="Commands:UICommands.CheckForUpdates" Executed="CheckForUpdatesCommandBinding_Executed" CanExecute="CheckForUpdatesCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="DownloadCoversFromWebCommandBinding" x:Name="DownloadCoversFromWebCommandBinding" Command="Commands:UICommands.DownloadCoversFromWeb" Executed="DownloadCoversFromWebCommandBinding_Executed" CanExecute="DownloadCoversFromWebCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="ExportListToFileCommandBinding" x:Name="ExportListToFileCommandBinding" Command="Commands:UICommands.ExportListToFile" Executed="ExportListToFileCommandBinding_Executed" CanExecute="ExportListToFileCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="LoadSecondaryDriveCommandBinding" x:Name="LoadSecondaryDriveCommandBinding" Command="Commands:UICommands.LoadSecondaryDrive" Executed="LoadSecondaryDriveCommandBinding_Executed" CanExecute="LoadSecondaryDriveCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="UnloadSecondaryDriveCommandBinding" x:Name="UnloadSecondaryDriveCommandBinding" Command="Commands:UICommands.UnloadSecondaryDrive" Executed="UnloadSecondaryDriveCommandBinding_Executed" CanExecute="UnloadSecondaryDriveCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="RefreshDriveListsCommandBinding" x:Name="RefreshDriveListsCommandBinding" Command="Commands:UICommands.RefreshDriveLists" Executed="RefreshDriveListsCommandBinding_Executed" CanExecute="RefreshDriveListsCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="CloneToDriveCommandBinding" x:Name="CloneToDriveCommandBinding" Command="Commands:UICommands.CloneToDrive" Executed="CloneToDriveCommandBinding_Executed" CanExecute="CloneToDriveCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="DriveToDriveCopyCommandBinding" x:Name="DriveToDriveCopyCommandBinding" Command="Commands:UICommands.DriveToDriveCopy" Executed="DriveToDriveCopyCommandBinding_Executed" CanExecute="DriveToDriveCopyCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Name="HelpCommandBinding" Command="ApplicationCommands.Help" Executed="HelpCommandBinding_Executed" CanExecute="HelpCommandBinding_CanExecute"></CommandBinding>
+        <CommandBinding x:Uid="AboutCommandBinding" x:Name="AboutCommandBinding" Command="Commands:UICommands.About" Executed="AboutCommandBinding_Executed" CanExecute="AboutCommandBinding_CanExecute"></CommandBinding>
+    </Window.CommandBindings>
+    <DockPanel x:Uid="DockPanel_1" LastChildFill="True">
+        <StatusBar x:Uid="StatusBar_1" DockPanel.Dock="Bottom" Height="35">
+            <Grid x:Uid="Grid_1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Uid="ColumnDefinition_1" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_2" Width="85"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_3" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_4" Width="85"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_5" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_6" Width="85"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_7" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_8" Width="80"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_7" Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Border x:Uid="Border_1" Grid.Column="0" BorderBrush="SlateGray" BorderThickness="3,1,2,1" CornerRadius="0,0,0,10">
+                    <Label x:Uid="Label_1" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=TotalSpaceText}"></Label>
+                </Border>
+
+                <Border x:Uid="Border_2" Grid.Column="1" BorderBrush="SlateGray" BorderThickness="0,1,3,1" CornerRadius="0,0,10,0">
+                    <Label x:Uid="TotalSpaceLabel" Name="TotalSpaceLabel"></Label>
+                </Border>
+
+                <Border x:Uid="Border_3" Grid.Column="2" BorderBrush="SlateGray" BorderThickness="3,1,2,1" CornerRadius="0,0,0,10">
+                    <Label x:Uid="Label_2" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=UsedSpaceText}"></Label>
+                </Border>
+
+                <Border  x:Uid="Border_4" Grid.Column="3" BorderBrush="SlateGray" BorderThickness="0,1,3,1" CornerRadius="0,0,10,0">
+                    <Label x:Uid="UsedSpaceLabel" Name="UsedSpaceLabel"></Label>
+                </Border>
+
+                <Border x:Uid="Border_5" Grid.Column="4" BorderBrush="SlateGray" BorderThickness="3,1,2,1" CornerRadius="0,0,0,10">
+                    <Label x:Uid="Label_3" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=FreeSpaceText}"></Label>
+                </Border>
+
+                <Border x:Uid="Border_6" Grid.Column="5" BorderBrush="SlateGray" BorderThickness="0,1,3,1" CornerRadius="0,0,10,0">
+                    <Label x:Uid="FreeSpaceLabel" Name="FreeSpaceLabel"></Label>
+                </Border>
+
+                <Border x:Uid="Border_7" Grid.Column="6" BorderBrush="SlateGray" BorderThickness="3,1,2,1" CornerRadius="0,0,0,10">
+                    <Label x:Uid="Label_4" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=BlocksUsedText}"></Label>
+                </Border>
+
+                <Border x:Uid="Border_8" Grid.Column="7" BorderBrush="SlateGray" BorderThickness="0,1,3,1" CornerRadius="0,0,10,0">
+                    <Label x:Uid="BlocksUsedLabel" Name="BlocksUsedLabel"></Label>
+                </Border>
+
+            </Grid>
+        </StatusBar>
+        <Menu x:Uid="Menu_1" DockPanel.Dock="Top" Height="Auto">
+            <MenuItem x:Uid="MenuItem_1" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=FileMenuText}" IsTabStop="False">
+                <MenuItem x:Uid="FileExitMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ExitMenuText}" Name="FileExitMenuItem" Command="Commands:UICommands.Exit" />
+            </MenuItem>
+            <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=EditMenuText}" IsTabStop="False">
+                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=EditShowOptionsText}" Name="EditShowOptionsMenuItem" Command="Commands:UICommands.ShowOptions" />
+                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=EditShowCoversText}" Name="EditShowCoversMenuItem" Command="Commands:UICommands.ShowCovers" IsCheckable="True" IsChecked="True" />
+                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DownloadCoversFromWebText}" Name="EditDownloadCoversFromWebMenuItem" Command="Commands:UICommands.DownloadCoversFromWeb" IsCheckable="True" IsChecked="True" />
+                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=EditLanguageMenuText}" Name="EditLanguageMenuItem" >
+                    <!--<MenuItem Header="English" Name="EditLangEnglishMenuItem" Command="Commands:UICommands.ChangeLanguage" CommandParameter="en" IsCheckable="True" IsChecked="True"></MenuItem>
+                    <MenuItem Header="Français" Name="EditLangFrenchMenuItem" Command="Commands:UICommands.ChangeLanguage" CommandParameter="fr" IsCheckable="True" IsChecked="False"></MenuItem>
+                    <MenuItem Header="Español" Name="EditLangEspanolMenuItem" Command="Commands:UICommands.ChangeLanguage" CommandParameter="es" IsCheckable="True" IsChecked="False"></MenuItem>-->
+                </MenuItem>
+
+            </MenuItem>
+            <MenuItem x:Uid="MenuItem_2" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=WBFSDriveMenuText}">
+                <MenuItem x:Uid="MenuItem_3" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=LoadText}" Command="Commands:UICommands.LoadDrive"></MenuItem>
+                <Separator x:Uid="Separator_1"></Separator>
+                <MenuItem x:Uid="MenuItem_4" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=AddToDriveMenuText}" Command="Commands:UICommands.AddToDrive"></MenuItem>
+                <MenuItem x:Uid="MenuItem_5" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RemoveFromListText}" Command="Commands:UICommands.RemoveFromList"></MenuItem>
+                <MenuItem x:Uid="MenuItem_6" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=BrowseText}" Command="Commands:UICommands.Browse"></MenuItem>
+                <MenuItem x:Uid="MenuItem_7" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ClearText}" Command="Commands:UICommands.ClearList"></MenuItem>
+                <Separator x:Uid="Separator_2"></Separator>
+                <MenuItem x:Uid="MenuItem_8" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DeleteGameText}" Command="Commands:UICommands.RemoveFromDrive"></MenuItem>
+                <MenuItem x:Uid="MenuItem_9" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ExtractMenuText}" Command="Commands:UICommands.Extract"></MenuItem>
+                <Separator x:Uid="Separator_3"></Separator>
+                <MenuItem x:Uid="MenuItem_10" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=FormatText}" Command="Commands:UICommands.Format"></MenuItem>
+            </MenuItem>
+            <MenuItem x:Uid="MenuItem_11" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=HelpMenuText}" IsTabStop="False">
+                <MenuItem Command="ApplicationCommands.Help" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=OnlineHelpMenuText}"></MenuItem>
+                <Separator/>
+                <MenuItem x:Uid="CheckForUpdatesMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=CheckForUpdatesMenuText}" Name="CheckForUpdatesMenuItem" Command="Commands:UICommands.CheckForUpdates"/>
+                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=VisitBlogMenuText}" Name="VisitBlogMenuItem" Click="VisitBlogMenuItem_Click"></MenuItem>
+                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=VisitDownloadMenuText}" Name="VisitDownloadMenuItem" Click="VisitDownloadMenuItem_Click"></MenuItem>
+                <Separator/>
+                <MenuItem x:Uid="AboutMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=AboutMenuText}" Name="AboutMenuItem" Command="Commands:UICommands.About"/>
+            </MenuItem>
+        </Menu>
+        <Expander DockPanel.Dock="Right" ExpandDirection="Right" Name="ToAddExpander" Expanded="ToAddExpander_Expanded" Collapsed="ToAddExpander_Collapsed">
+            <Expander.Header>
+                <TextBlock Text="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=LargeCoverViewText}" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </TextBlock.LayoutTransform>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+                </TextBlock>
+            </Expander.Header>
+
+            <Grid>
+                <Image Name="ToAddCoverViewImage" Width="200" Source="{Binding ElementName=AddListBox,Path=SelectedItem.ToolTipImage}"></Image>
+            </Grid>
+        </Expander>
+        <Expander DockPanel.Dock="Left" ExpandDirection="Left" Name="OnDriveExpander" Expanded="OnDriveExpander_Expanded" Collapsed="OnDriveExpander_Collapsed">
+            <Expander.Header>
+                <TextBlock Text="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=LargeCoverViewText}" RenderTransformOrigin="0.5,0.5">
+            <TextBlock.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="90"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </TextBlock.LayoutTransform>
+            <TextBlock.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="1" ScaleY="1"/>
+                    <SkewTransform AngleX="0" AngleY="0"/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform X="0" Y="0"/>
+                </TransformGroup>
+            </TextBlock.RenderTransform>
+                </TextBlock>
+            </Expander.Header>
+
+            <Grid>
+                <Image Name="OnDriveCoverViewImage" VerticalAlignment="Center" Width="200" Source="{Binding ElementName=EntryListBox,Path=SelectedItem.ToolTipImage}"></Image>
+            </Grid>
+        </Expander>
+        <Grid x:Uid="Grid_2">
+            <Grid.RowDefinitions>
+                <RowDefinition x:Uid="RowDefinition_1" Height="30"/>
+                <RowDefinition x:Uid="RowDefinition_2"/>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid x:Uid="Grid_3" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Uid="ColumnDefinition_9" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_10" Width="80"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_11" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_12" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_13" Width="Auto"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_14"/>
+                    <ColumnDefinition x:Uid="ColumnDefinition_15" Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition x:Uid="ColumnDefinition_16" Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label x:Uid="Label_5" Grid.Column="0" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DriveLabelText}"></Label>
+                <ComboBox x:Uid="DriveComboBox" Grid.Column="1" Name="DriveComboBox"></ComboBox>
+                <Button x:Uid="LoadButton" Grid.Column="2" Margin="5,0,0,0" MinWidth="85" Name="LoadButton"  Command="Commands:UICommands.LoadDrive" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=LoadText}">
+                    <!--_Load-->
+                </Button>
+                <Button x:Uid="FormatButton" Grid.Column="3" Margin="5,0,0,0" MinWidth="85" Name="FormatButton" BorderBrush="DarkRed" Command="Commands:UICommands.Format" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=FormatText}"></Button>
+                <Button x:Uid="RefreshDrivesButton" Grid.Column="4" Margin="5,0,0,0" Name="RefreshDrivesButton" Command="Commands:UICommands.RefreshDriveLists">
+                    <StackPanel x:Uid="StackPanel_1" Orientation="Horizontal">
+                        <Image x:Uid="Image_1" Source="../Content/Refresh.png"></Image>
+                        <Label x:Uid="Label_6" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RefreshDriveListText}"></Label>
+                    </StackPanel>
+                </Button>
+                <Button x:Uid="TestButton" Name="TestButton" Visibility="Hidden" Click="TestButton_Click" Grid.Column="5">Test Button</Button>
+                <Button x:Uid="DonateButton" Name="DonateButton" Margin="0,0,5,0" Grid.Column="6" Click="DonateButton_Click">
+                    <Image x:Uid="Image_2" Source="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=donatePayPalSmall}"></Image>
+                    <!--../Content/donatePayPalSmall.gif-->
+                </Button>
+                <Label x:Uid="Label_7" Grid.Column="7">
+                    <Hyperlink x:Uid="Hyperlink_1" Click="Hyperlink_Click">www.wiinewz.com</Hyperlink>
+                </Label>
+            </Grid>
+            <Grid x:Uid="MainGrid" Grid.Row="1" Name="MainGrid" IsEnabled="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Uid="ColumnDefinition_17" />
+                    <ColumnDefinition x:Uid="ColumnDefinition_18" />
+                </Grid.ColumnDefinitions>
+
+                <Grid x:Uid="Grid_4" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Uid="RowDefinition_3" Height="30"/>
+                        <RowDefinition x:Uid="RowDefinition_4"/>
+                        <RowDefinition x:Uid="RowDefinition_5" Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" CornerRadius="15,15,0,0" BorderThickness="2,1,2,0" BorderBrush="SlateGray" Margin="5,0,5,0" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label x:Uid="Label_8" Grid.Column="0" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=GamesOnDriveLabelText}"></Label>
+                            <Label Grid.Column="2" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SelectedItemsText}"></Label>
+                            <Label Grid.Column="3" Content="{Binding ElementName=EntryListBox, Path=SelectedItems.Count}"></Label>
+                            <Label Grid.Column="4" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ItemsText}"></Label>
+                            <Label Grid.Column="5" Margin="0,0,20,0" Name="GamesOnDriveCount" Content="{Binding ElementName=EntryListBox, Path=Items.Count}"></Label>
+                        </Grid>
+                    </Border>
+                    <ListBox x:Uid="EntryListBox" Grid.Row="1" Margin="5,0,5,0" Name="EntryListBox" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ItemTemplate="{StaticResource EntryListTemplate}" SnapsToDevicePixels="True" SelectionMode="Extended">
+                        <ListBox.ContextMenu>
+                            <ContextMenu x:Uid="ContextMenu_1">
+                                <MenuItem x:Uid="MenuItem_12" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DeleteGameText}" Command="Commands:UICommands.RemoveFromDrive"></MenuItem>
+                                <MenuItem x:Uid="MenuItem_13" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RenameMenuText}" Command="Commands:UICommands.RenameOnDrive"></MenuItem>
+                                <MenuItem x:Uid="MenuItem_14" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ExtractMenuText}" Command="Commands:UICommands.Extract"></MenuItem>
+                                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=MakeSingleHBCMenuText}" Command="Commands:UICommands.MakeSingleHBC" CommandParameter="OnDrive"></MenuItem>
+                                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=MakeAllHBCMenuText}" Command="Commands:UICommands.MakeAllHBC" CommandParameter="OnDrive"></MenuItem>
+                                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ExportListToFileText}" Command="Commands:UICommands.ExportListToFile"></MenuItem>
+                                <Separator x:Uid="Separator_4"></Separator>
+                                <MenuItem x:Uid="MenuItem_15" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByMenuText}">
+                                    <MenuItem x:Uid="SortByNameOnDriveMenuItem" Name="SortByNameOnDriveMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByNameMenuText}" Command="Commands:UICommands.SortByName" CommandParameter="OnDrive" IsCheckable="True" IsChecked="True"></MenuItem>
+                                    <MenuItem x:Uid="SortByIdOnDriveMenuItem" Name="SortByIdOnDriveMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByIdMenuText}" Command="Commands:UICommands.SortById" CommandParameter="OnDrive" IsCheckable="True"></MenuItem>
+                                    <MenuItem x:Uid="SortBySizeOnDriveMenuItem" Name="SortBySizeOnDriveMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortBySizeMenuText}" Command="Commands:UICommands.SortBySize" CommandParameter="OnDrive" IsCheckable="True"></MenuItem>
+                                    <MenuItem x:Uid="SortByIndexOnDriveMenuItem" Name="SortByIndexOnDriveMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByLocationMenuText}" Command="Commands:UICommands.SortByIndex" CommandParameter="OnDrive" IsCheckable="True"></MenuItem>
+                                </MenuItem>
+                            </ContextMenu>
+                        </ListBox.ContextMenu>
+                    </ListBox>
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <ToolBar Grid.Row="1" HorizontalAlignment="Center" Grid.IsSharedSizeScope="False">
+                            <!--<Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition x:Uid="ColumnDefinition_21" Width="Auto"/>
+                            <ColumnDefinition x:Uid="ColumnDefinition_22" Width="Auto"/>
+                            <ColumnDefinition x:Uid="ColumnDefinition_23" Width="Auto"/>
+                            <ColumnDefinition x:Uid="ColumnDefinition_23" Width="Auto"/>
+                        </Grid.ColumnDefinitions>-->
+                            <!--<StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">-->
+                            <Grid x:Uid="Grid_5" Grid.Column="0" Grid.Row="1">
+                                <Button x:Uid="RemoveButton" Name="RemoveButton" Grid.Column="1" Margin="0" Command="Commands:UICommands.RemoveFromDrive">
+                                    <StackPanel x:Uid="StackPanel_2" Orientation="Horizontal">
+                                        <Image x:Uid="Image_3" Source="../Content/delete.png"></Image>
+                                        <Label x:Uid="Label_9" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DeleteButtonText}"></Label>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                            <Grid  Grid.Row="1"  Grid.Column="1">
+                                <Button x:Uid="RenameOnDriveButton" Name="RenameOnDriveButton" Grid.Column="2" Margin="0" Command="Commands:UICommands.RenameOnDrive">
+                                    <StackPanel x:Uid="StackPanel_3" Orientation="Horizontal">
+                                        <Image x:Uid="Image_4" Source="../Content/Rename.png"></Image>
+                                        <Label x:Uid="Label_10" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RenameButtonText}"></Label>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                            <Grid Grid.Row="1" Grid.Column="2">
+                                <Button x:Uid="ExtractButton" Name="ExtractButton" Grid.Column="3" Margin="0" Command="Commands:UICommands.Extract">
+                                    <StackPanel x:Uid="StackPanel_4" Orientation="Horizontal">
+                                        <Image x:Uid="Image_5" Source="../Content/ExtractToDisc.png"></Image>
+                                        <Label x:Uid="Label_11" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ExtractMenuText}"></Label>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                            <Grid Grid.Column="3" Grid.Row="1">
+                                <Button Grid.Column="4" Name="CloneButton" Margin="0" Command="Commands:UICommands.CloneToDrive">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Image Source="../Content/CloneDrive.png"></Image>
+                                        <Label Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=CloneText}"></Label>
+                                    </StackPanel>
+                                </Button>
+                            </Grid>
+                            <!--</StackPanel>-->
+
+                            <!--</Grid>-->
+                        </ToolBar>
+                        <ProgressBar Grid.Row="0" Grid.ColumnSpan="5" Margin="5" Name="PercentagePlusToAddBar" Foreground="#FF01D328" Value="{Binding ElementName=MainWindowInstance,Path=PercentDiskPlusToAdd,Mode=OneWay}"  Template="{StaticResource FlatProgressBarTemplate}"/>
+                        <ProgressBar Grid.Row="0" Grid.ColumnSpan="5" Margin="5" Foreground="#FF2B5FD7" Background="Transparent" Panel.ZIndex="1" Value="{Binding ElementName=MainWindowInstance,Path=PercentDiskSpaceUsed,Mode=OneWay}" Template="{StaticResource FlatProgressBarTemplate}"/>
+                    </Grid>
+
+                </Grid>
+                <Grid x:Uid="Grid_6" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition x:Uid="RowDefinition_6" Height="30"/>
+                        <RowDefinition x:Uid="RowDefinition_7"/>
+                        <RowDefinition x:Uid="RowDefinition_8" Height="70"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" CornerRadius="15,15,0,0" BorderThickness="2,1,2,0" BorderBrush="SlateGray" Margin="5,0,5,0" >
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label x:Uid="Label_12" Grid.Column="0" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=GamesToAddLabelText}"></Label>
+                            <Label Grid.Column="2" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=EstimatedTotalSizeText}"></Label>
+                            <Label Grid.Column="3" Content="{Binding ElementName=MainWindowInstance, Path=EstimatedTotalSizeString}"></Label>
+                            <Label Grid.Column="4" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ItemsText}"></Label>
+                            <Label Grid.Column="5" Margin="0,0,20,0" Name="GamesToAddCount" Content="{Binding ElementName=AddListBox, Path=Items.Count}"></Label>
+                        </Grid>
+                    </Border>
+                    <ListBox x:Uid="AddListBox" Grid.Row="1" Margin="5,0,5,0" Name="AddListBox" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ItemTemplate="{StaticResource EntryToAddListTemplate}" SnapsToDevicePixels="True" AllowDrop="True" Drop="AddListBox_Drop" SelectionMode="Extended">
+                        <ListBox.ContextMenu>
+                            <ContextMenu x:Uid="ContextMenu_2">
+                                <MenuItem x:Uid="MenuItem_16" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=AddToDriveMenuText}" Command="Commands:UICommands.AddToDrive"></MenuItem>
+                                <MenuItem x:Uid="MenuItem_17" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RemoveFromListText}" Command="Commands:UICommands.RemoveFromList"></MenuItem>
+                                <MenuItem x:Uid="MenuItem_18" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RenameMenuText}" Command="Commands:UICommands.RenameOnAdd"></MenuItem>
+                                <MenuItem x:Uid="MenuItem_19" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=BrowseText}" Command="Commands:UICommands.Browse"></MenuItem>
+                                <MenuItem x:Uid="MenuItem_20" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ClearText}" Command="Commands:UICommands.ClearList"></MenuItem>
+                                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=MakeSingleHBCMenuText}" Command="Commands:UICommands.MakeSingleHBC" CommandParameter="ToAdd"></MenuItem>
+                                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=MakeAllHBCMenuText}" Command="Commands:UICommands.MakeAllHBC" CommandParameter="ToAdd"></MenuItem>
+                                <MenuItem Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=CreateChannelsText}" Command="Commands:UICommands.CreateChannel"></MenuItem>
+                                <Separator x:Uid="Separator_5"></Separator>
+                                <MenuItem x:Uid="MenuItem_21" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByMenuText}">
+                                    <MenuItem x:Uid="SortByNameToAddMenuItem" Name="SortByNameToAddMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByNameMenuText}" Command="Commands:UICommands.SortByName" CommandParameter="ToAdd" IsChecked="True" IsCheckable="True"></MenuItem>
+                                    <MenuItem x:Uid="SortByIdToAddMenuItem" Name="SortByIdToAddMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByIdMenuText}" Command="Commands:UICommands.SortById" CommandParameter="ToAdd" IsCheckable="True"></MenuItem>
+                                    <MenuItem x:Uid="SortBySizeToAddMenuItem" Name="SortBySizeToAddMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortBySizeMenuText}" Command="Commands:UICommands.SortBySize" CommandParameter="ToAdd" IsCheckable="True"></MenuItem>
+                                    <MenuItem x:Uid="SortByStatusToAddMenuItem" Name="SortByStatusToAddMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByStatusMenuText}" Command="Commands:UICommands.SortByStatus" CommandParameter="ToAdd" IsCheckable="True"></MenuItem>
+                                    <MenuItem x:Uid="SortByFilePathToAddMenuItem" Name="SortByFilePathToAddMenuItem" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=SortByIsoLocMenuText}" Command="Commands:UICommands.SortByFilePath" CommandParameter="ToAdd" IsCheckable="True"></MenuItem>
+                                </MenuItem>
+                            </ContextMenu>
+                        </ListBox.ContextMenu>
+                    </ListBox>
+                    <!--<ToolBar Grid.Row="2">-->
+                    <Grid Grid.Row="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <ToolBar Grid.Row="0" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Grid.Row="0" HorizontalAlignment="Center">
+                                <Grid x:Uid="Grid_7">
+                                    <!--<Grid.ColumnDefinitions>
+                                <ColumnDefinition x:Uid="ColumnDefinition_24"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_25" Width="Auto"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_26" Width="Auto"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_27" Width="Auto"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_28" Width="Auto"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_29" Width="Auto"/>
+                                <ColumnDefinition x:Uid="ColumnDefinition_30"/>
+                            </Grid.ColumnDefinitions>-->
+                                    <Button x:Uid="AddButton" Name="AddButton" Grid.Column="1" Margin="0" Command="Commands:UICommands.AddToDrive">
+                                        <StackPanel x:Uid="StackPanel_5" Orientation="Horizontal">
+                                            <Image x:Uid="Image_6" Source="../Content/AddToDrive.png" Width="25"></Image>
+                                            <Label x:Uid="Label_13" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=AddToDriveButtonText}"></Label>
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <Button x:Uid="CreateChannelButton" Name="CreateChannelButton" Margin="0" Command="Commands:UICommands.CreateChannel">
+                                        <StackPanel x:Uid="StackPanel_CreateChan" Orientation="Horizontal">
+                                            <Image Source="../Content/AddChannel.png"></Image>
+                                            <Label Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=CreateChannelsText}"></Label>
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <Button x:Uid="RenameOnAddButton" Name="RenameOnAddButton" Grid.Column="2" Margin="0" Command="Commands:UICommands.RenameOnAdd">
+                                        <StackPanel x:Uid="StackPanel_6" Orientation="Horizontal">
+                                            <Image x:Uid="Image_7" Source="../Content/Rename.png"></Image>
+                                            <Label x:Uid="Label_14" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RenameButtonText}"></Label>
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+
+                            </StackPanel>
+                        </ToolBar>
+                        <!--</ToolBar>-->
+                        <ToolBar Grid.Row="1" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center">
+                                <Grid>
+                                    <Button x:Uid="RemoveFromListButton" Name="RemoveFromListButton" Grid.Column="3" Margin="0"  Command="Commands:UICommands.RemoveFromList">
+                                        <StackPanel x:Uid="StackPanel_7" Orientation="Horizontal">
+                                            <Image x:Uid="Image_8" Source="../Content/delete.png"></Image>
+                                            <Label x:Uid="Label_15" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RemoveFromListText}"></Label>
+
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <Button x:Uid="BrowseButton" Name="BrowseButton"  Grid.Column="4" Margin="0"  Command="Commands:UICommands.Browse">
+                                        <Button.ToolTip>
+                                            <ToolTip Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=BrowseText}"></ToolTip>
+                                        </Button.ToolTip>
+                                        <StackPanel Orientation="Horizontal" MinWidth="90">
+                                            <Image Source="../Content/Browse.png"></Image>
+                                            <Label Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=BrowseText}"></Label>
+                                        </StackPanel>
+                                    </Button>
+                                </Grid>
+                                <Grid>
+                                    <Button x:Uid="ClearButton" Name="ClearButton" MinWidth="90" Grid.Column="5" Margin="0" Command="Commands:UICommands.ClearList" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ClearText}"></Button>
+                                </Grid>
+                            </StackPanel>
+                        </ToolBar>
+                    </Grid>
+                </Grid>
+            </Grid>
+
+            <Expander Grid.Row="2" Header="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DriveToDriveText}" ExpandDirection="Down" Name="DriveToDriveExpander" Expanded="DriveToDriveExpander_Expanded" Collapsed="DriveToDriveExpander_Collapsed">
+                <Grid Name="ExpanderGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="180"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0" Name="SecondaryDriveButtonGrid" IsEnabled="False">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DriveLabelText}"></Label>
+                        <ComboBox Grid.Column="1" Name="SecondaryDriveComboBox"></ComboBox>
+                        <Button Grid.Column="2" Margin="5,0,0,0" MinWidth="85" Name="LoadSecondaryButton" Command="Commands:UICommands.LoadSecondaryDrive" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=LoadText}">
+                            <!--_Load-->
+                        </Button>
+                        <Button Grid.Column="3" Margin="5,0,0,0" MinWidth="85" Name="UnloadSecondaryButton" Command="Commands:UICommands.UnloadSecondaryDrive" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=UnloadText}">
+                            <!--Unload-->
+                        </Button>
+                        <Button Grid.Column="4" Margin="5,0,0,0" Name="RefreshSecondaryDrivesButton" Command="Commands:UICommands.RefreshDriveLists">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Content/Refresh.png"></Image>
+                                <Label Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=RefreshDriveListText}"></Label>
+                            </StackPanel>
+                        </Button>
+                        <Button Name="CopyToDriveButton" Grid.Column="5" Margin="5,0" Command="Commands:UICommands.DriveToDriveCopy">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="../Content/DriveToDrive.png"></Image>
+                                <Label Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=DriveToDriveCopyText}"></Label>
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+                    <Grid Grid.Row="1" Name="SecondaryDriveMainGrid" IsEnabled="False">
+                        <Grid.RowDefinitions>
+                            <RowDefinition x:Uid="RowDefinition_3" Height="30"/>
+                            <RowDefinition x:Uid="RowDefinition_4"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" CornerRadius="15,15,0,0" BorderThickness="2,1,2,0" BorderBrush="SlateGray" Margin="5,0,5,0" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label x:Uid="Label_8" Grid.Column="0" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=GamesOnSecondaryText}"></Label>
+                                <Label Grid.Column="2" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=TotalSpaceText}"></Label>
+                                <Label Grid.Column="3" Margin="0,0,20,0" Name="TotalSpaceOnSecondaryLabel"></Label>
+                                <Label Grid.Column="4" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=UsedSpaceText}"></Label>
+                                <Label Grid.Column="5" Margin="0,0,20,0" Name="UsedSpaceOnSecondaryLabel"></Label>
+                                <Label Grid.Column="6" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=FreeSpaceText}"></Label>
+                                <Label Grid.Column="7" Margin="0,0,20,0" Name="FreeSpaceOnSecondaryLabel"></Label>
+                                <Label Grid.Column="8" Content="{Resx ResxName=WBFSManager.UI.Localization.MainWindow.MainWindowR, Key=ItemsText}"></Label>
+                                <Label Grid.Column="9" Margin="0,0,20,0" Name="GamesOnSecondaryDriveCount" Content="{Binding ElementName=SecondDriveListBox, Path=Items.Count}"></Label>
+                            </Grid>
+                        </Border>
+                        <ListBox x:Uid="SecondDriveListBox" Grid.Row="1" Margin="5,0,5,0" Name="SecondDriveListBox" Style="{StaticResource HorizontalListBox}" ScrollViewer.VerticalScrollBarVisibility="Hidden" ItemTemplate="{StaticResource SecondaryDriveListTemplate}" SnapsToDevicePixels="True" Focusable="True">
+
+                        </ListBox>
+                    </Grid>
+                </Grid>
+            </Expander>
+        </Grid>
+    </DockPanel>
+</Window>

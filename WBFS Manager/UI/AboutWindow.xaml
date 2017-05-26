@@ -1,0 +1,31 @@
+﻿<Window x:Uid="Window_1" x:Class="WBFSManager.UI.AboutWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xml:lang="en-US"
+    Title="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=AboutTitleText}" Height="498" Width="429" WindowStartupLocation="CenterOwner" Icon="../Content/WBFSManagerNew.png" ShowInTaskbar="False" ResizeMode="NoResize" SizeToContent="Height" SnapsToDevicePixels="True">
+    <StackPanel x:Uid="StackPanel_1">
+        <Label x:Uid="Label_1" HorizontalAlignment="Center" FontSize="15" Content="Wii Backup File System Manager 3.0"></Label>
+        <Label x:Uid="Label_2" HorizontalAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=WrittenByText}"></Label>
+        <Label x:Uid="Label_3" HorizontalAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=LibWbfsText}"></Label>
+        <Label x:Uid="Label_4" HorizontalAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=RenameByText}"></Label>
+        <Label x:Uid="Label_4" HorizontalAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=AdditionalImagesText}"></Label>
+        <!--<Label x:Uid="Label_11" HorizontalAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=FrenchTransText}"></Label>
+        <Label x:Uid="Label_11es" HorizontalAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=SpanishTransText}"></Label>-->
+        <StackPanel Orientation="Vertical" Name="TransCredsStackPanel"></StackPanel>
+        <Label x:Uid="Label_5" HorizontalAlignment="Center">
+            <StackPanel x:Uid="StackPanel_2" Orientation="Horizontal">
+                <Label x:Uid="Label_6" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=HostedByText}"></Label>
+                <Label x:Uid="Label_7">
+                    <Hyperlink x:Uid="Hyperlink_1" Click="Hyperlink_Click">www.wiinewz.com</Hyperlink>
+                </Label>
+            </StackPanel>
+        </Label>
+        <Label x:Uid="Label_8" HorizontalAlignment="Center" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=USBLoaderText}"></Label>
+        <Image x:Uid="image1" Height="128" Name="image1" Stretch="Fill" Width="128" Source="../Content/WBFSManagerNew.png" />
+        <Label x:Uid="Label_9" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=PayPalText}"></Label>
+        <Button x:Uid="Button_1" HorizontalAlignment="Center" Click="Button_Click">
+            <Image x:Uid="Image_1" Source="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=donatePayPal}" Height="50" ></Image>
+            <!--../Content/donatePayPal.gif-->
+        </Button>
+        <Label x:Uid="Label_10" Content="{Resx ResxName=WBFSManager.UI.Localization.AboutDialog.AboutDialogR, Key=CopyrightText}"></Label>
+    </StackPanel>
+</Window>

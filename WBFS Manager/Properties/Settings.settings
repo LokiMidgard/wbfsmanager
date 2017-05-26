@@ -1,0 +1,81 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WBFSManager.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="FirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CoverDirs" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LoadedDrive" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ShowCovers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="UseWebCovers" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="CoverLinkNTSC" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.theotherzone.com/wii/ntsc/download.php?file=</Value>
+    </Setting>
+    <Setting Name="CoverLinkNTSCJ" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.theotherzone.com/wii/ntscj/download.php?file=</Value>
+    </Setting>
+    <Setting Name="CoverLinkPAL" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.theotherzone.com/wii/pal/download.php?file=</Value>
+    </Setting>
+    <Setting Name="CoverLinkKOR" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.theotherzone.com/wii/ntscj/download.php?file=</Value>
+    </Setting>
+    <Setting Name="MyDocsCoverDir" Type="System.String" Scope="User">
+      <Value Profile="(Default)">WBFS Manager Covers</Value>
+    </Setting>
+    <Setting Name="TempDirectory" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SecondaryLoadedDrive" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EnableRarExtraction" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="AutomaticUpdateChecks" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UpdateLink" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://wbfsmupdates.blogspot.com/feeds/posts/default?alt=rss</Value>
+    </Setting>
+    <Setting Name="SourceWadPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CommonKeyPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LoaderFilePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="LoaderOriginalTitleId" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EnableChannelCreation" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PartitionToUse" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">-2</Value>
+    </Setting>
+    <Setting Name="OnDriveExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ToAddExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DriveToDriveExpanded" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

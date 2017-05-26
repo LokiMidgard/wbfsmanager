@@ -1,0 +1,1155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <UICulture>en</UICulture>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FCC6C95-D3A1-4430-947B-FEC9254821E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WBFSManager</RootNamespace>
+    <AssemblyName>WBFSManager</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <ApplicationIcon>Content\WBFSManagerNew25.ico</ApplicationIcon>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <StartupObject>WBFSManager.AppMain</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Infralution.Localization.Wpf, Version=1.1.0.0, Culture=neutral, PublicKeyToken=547ccae517a004b5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Infralution.Localization.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="Data\ChannelPreset.cs" />
+    <Compile Include="Data\DriveStatistics.cs" />
+    <Compile Include="Data\ErrorDetails.cs" />
+    <Compile Include="Data\Sorters.cs" />
+    <Compile Include="Data\WBFSEntry.cs" />
+    <Compile Include="Properties\Resources.it-CH.Designer.cs">
+      <DependentUpon>Resources.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.es.Designer.cs">
+      <DependentUpon>Resources.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.zh-CHT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.zh-CHT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ChannelCreatorDialog.xaml.cs">
+      <DependentUpon>ChannelCreatorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HelpViewer.xaml.cs">
+      <DependentUpon>HelpViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutDialogR.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutDialogR.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutDialogR.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutDialogR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.es.Designer.cs">
+      <DependentUpon>AboutDialogR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutDialogR.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutDialogR.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.zh-CHT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutDialogR.zh-CHT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\AboutDialog\AboutDialogR.it-CH.Designer.cs">
+      <DependentUpon>AboutDialogR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.en.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.es.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.de.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.nl.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.nl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.fr.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.it.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.it.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.it-CH.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.zh-CHT.Designer.cs">
+      <DependentUpon>ChannelCreationDialogR.zh-CHT.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.it-CH.Designer.cs">
+      <DependentUpon>DefaultThemeR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultThemeR.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.es.Designer.cs">
+      <DependentUpon>DefaultThemeR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultThemeR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultThemeR.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultThemeR.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultThemeR.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultThemeR.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\DefaultTheme\DefaultThemeR.zh-CHT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DefaultThemeR.zh-CHT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\HelpViewer\HelpViewerR.es.Designer.cs">
+      <DependentUpon>HelpViewerR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\HelpViewer\HelpViewerR.nl.Designer.cs">
+      <DependentUpon>HelpViewerR.nl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\HelpViewer\HelpViewerR.de.Designer.cs">
+      <DependentUpon>HelpViewerR.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\HelpViewer\HelpViewerR.fr.Designer.cs">
+      <DependentUpon>HelpViewerR.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\HelpViewer\HelpViewerR.en.Designer.cs">
+      <DependentUpon>HelpViewerR.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\HelpViewer\HelpViewerR.Designer.cs">
+      <DependentUpon>HelpViewerR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.it-CH.Designer.cs">
+      <DependentUpon>MainWindowR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainWindowR.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.es.Designer.cs">
+      <DependentUpon>MainWindowR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.en.Designer.cs">
+      <DependentUpon>MainWindowR.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.fr.Designer.cs">
+      <DependentUpon>MainWindowR.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.fr.Designer.cs">
+      <DependentUpon>Resources.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="UI\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainWindowR.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainWindowR.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.zh-CHT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MainWindowR.zh-CHT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.zh-CHT.Designer.cs">
+      <DependentUpon>OptionsDialogR.zh-CHT.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.it-CH.Designer.cs">
+      <DependentUpon>OptionsDialogR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.fr.Designer.cs">
+      <DependentUpon>OptionsDialogR.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.it.Designer.cs">
+      <DependentUpon>OptionsDialogR.it.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.nl.Designer.cs">
+      <DependentUpon>OptionsDialogR.nl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.es.Designer.cs">
+      <DependentUpon>OptionsDialogR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.de.Designer.cs">
+      <DependentUpon>OptionsDialogR.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.en.Designer.cs">
+      <DependentUpon>OptionsDialogR.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\OptionsDialog\OptionsDialogR.Designer.cs">
+      <DependentUpon>OptionsDialogR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.it-CH.Designer.cs">
+      <DependentUpon>ProgressDialogR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressDialogR.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.es.Designer.cs">
+      <DependentUpon>ProgressDialogR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressDialogR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressDialogR.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressDialogR.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressDialogR.it.resx</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressDialogR.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\ProgressDialog\ProgressDialogR.zh-CHT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressDialogR.zh-CHT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.it-CH.Designer.cs">
+      <DependentUpon>RenameDialogR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenameDialogR.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.es.Designer.cs">
+      <DependentUpon>RenameDialogR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenameDialogR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenameDialogR.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenameDialogR.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenameDialogR.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenameDialogR.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\RenameDialog\RenameDialogR.zh-CHT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RenameDialogR.zh-CHT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.zh-CHT.Designer.cs">
+      <DependentUpon>UpdateViewerR.zh-CHT.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.it-CH.Designer.cs">
+      <DependentUpon>UpdateViewerR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.it.Designer.cs">
+      <DependentUpon>UpdateViewerR.it.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.fr.Designer.cs">
+      <DependentUpon>UpdateViewerR.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.nl.Designer.cs">
+      <DependentUpon>UpdateViewerR.nl.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.de.Designer.cs">
+      <DependentUpon>UpdateViewerR.de.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.es.Designer.cs">
+      <DependentUpon>UpdateViewerR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.en.Designer.cs">
+      <DependentUpon>UpdateViewerR.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\UpdateViewer\UpdateViewerR.Designer.cs">
+      <DependentUpon>UpdateViewerR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.it-CH.Designer.cs">
+      <DependentUpon>WelcomeDialogR.it-CH.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.de.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeDialogR.de.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.es.Designer.cs">
+      <DependentUpon>WelcomeDialogR.es.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeDialogR.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.en.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeDialogR.en.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeDialogR.fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.it.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeDialogR.it.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.nl.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeDialogR.nl.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\WelcomeDialog\WelcomeDialogR.zh-CHT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelcomeDialogR.zh-CHT.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\OptionsDialog.xaml.cs">
+      <DependentUpon>OptionsDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ProgressDialog.xaml.cs">
+      <DependentUpon>ProgressDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\RenameDialog.xaml.cs">
+      <DependentUpon>RenameDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Localization\MainWindow\MainWindowR.Designer.cs">
+      <DependentUpon>MainWindowR.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="UI\UICommands.cs" />
+    <Compile Include="UI\WelcomeDialog.xaml.cs">
+      <DependentUpon>WelcomeDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpdateViewer.xaml.cs">
+      <DependentUpon>UpdateViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="WbfsDrive.cs" />
+    <EmbeddedResource Include="Properties\Resources.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\AboutDialog\AboutDialogR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AboutDialogR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ChannelCreationDialog\ChannelCreationDialogR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ChannelCreationDialogR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\DefaultTheme\DefaultThemeR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>DefaultThemeR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\HelpViewer\HelpViewerR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpViewerR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\HelpViewer\HelpViewerR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpViewerR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\HelpViewer\HelpViewerR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpViewerR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\HelpViewer\HelpViewerR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpViewerR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\HelpViewer\HelpViewerR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpViewerR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\HelpViewer\HelpViewerR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpViewerR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\MainWindow\MainWindowR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>MainWindowR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\OptionsDialog\OptionsDialogR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>OptionsDialogR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.it.Designer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\ProgressDialog\ProgressDialogR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressDialogR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\RenameDialog\RenameDialogR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>RenameDialogR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\UpdateViewer\UpdateViewerR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>UpdateViewerR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.it-CH.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.it-CH.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.de.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.de.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.es.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.it.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.it.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.nl.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.nl.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Localization\WelcomeDialog\WelcomeDialogR.zh-CHT.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>WelcomeDialogR.zh-CHT.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="UI\AboutWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ChannelCreatorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\HelpViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\OptionsDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\ProgressDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\RenameDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\Themes\DefaultTheme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\WelcomeDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UI\UpdateViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\WBFSManager.ico" />
+    <Resource Include="Content\WBFSManager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\WBFSManager Banner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\delete.png" />
+    <Resource Include="Content\Rename.png" />
+    <Resource Include="Content\AddToDrive.png" />
+    <Resource Include="Content\ExtractToDisc.png" />
+    <Resource Include="Content\donatePayPal.gif" />
+    <Resource Include="Content\donatePayPalSmall.gif" />
+    <Resource Include="Content\error.png" />
+    <Resource Include="Content\check.png" />
+    <Resource Include="Content\Refresh.png" />
+    <None Include="Channels\Sorg\USB-DirectFromChannel.dol">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Channels\WiiCrazy15\USBL15USB.dol" />
+    <None Include="HBC\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Content\donatePayPalSmallFr.gif" />
+    <None Include="Content\donatePayPalFr.gif" />
+    <Resource Include="Covers-Readme.txt" />
+    <Resource Include="Content\DownloadingImage.png" />
+    <None Include="Content\donatePayPalSmallEs.gif" />
+    <None Include="Content\donatePayPalEs.gif" />
+    <None Include="Content\donatePayPalSmallNl.gif" />
+    <None Include="Content\donatePayPalNl.gif" />
+    <Resource Include="UI\Localization\TranslationCredits\metadata.fr.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="UI\Localization\TranslationCredits\metadata.nl.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Include="Content\donatePayPalDe.gif" />
+    <None Include="Content\donatePayPalSmallDe.gif" />
+    <SplashScreen Include="Content\WBFSManager BannerNew.png" />
+    <Resource Include="Content\WBFSManagerNew.png" />
+    <None Include="Content\donatePayPalIt.gif" />
+    <None Include="Content\donatePayPalSmallIt.gif" />
+    <Resource Include="Content\WBFSManagerNew25.ico" />
+    <Resource Include="Content\CloneDrive.png" />
+    <Resource Include="Content\DriveToDrive.png" />
+    <Resource Include="Content\Browse.png" />
+    <None Include="Channels\Sorg\metadata.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Resource Include="Content\AddChannel.png" />
+    <Resource Include="Channels\WiiCrazy15\metadata.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Infralution.Localization.Wpf.dll" />
+    <Content Include="libwbfsNETwrapper.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="UI\Localization\TranslationCredits\metadata.it.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="UI\Localization\TranslationCredits\metadata.zh-CHT.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="UI\Localization\TranslationCredits\metadata.de.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="UI\Localization\TranslationCredits\metadata.es.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="HBC\boot.dol">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChannelCreationWrapper\ChannelCreationWrapper.csproj">
+      <Project>{600528EB-8711-4340-8BD9-6AFADE12A57E}</Project>
+      <Name>ChannelCreationWrapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libwbfsNET\libwbfsNET.csproj">
+      <Project>{BDAC622A-4C33-415C-BF6F-DD58C2D2C1A4}</Project>
+      <Name>libwbfsNET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RssUpdater\RssUpdater.csproj">
+      <Project>{B7B7C446-2884-497A-A450-948C26B788EB}</Project>
+      <Name>RssUpdater</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnRarNET\UnRarNET.csproj">
+      <Project>{AA7B7F34-AAD3-495C-B5A7-40548ABC49E4}</Project>
+      <Name>UnRarNET</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

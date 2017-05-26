@@ -1,0 +1,289 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutMenuText" xml:space="preserve">
+    <value>_Über</value>
+  </data>
+  <data name="AddToDriveButtonText" xml:space="preserve">
+    <value>Hinzufügen</value>
+  </data>
+  <data name="AddToDriveMenuText" xml:space="preserve">
+    <value>_Hinzufügen</value>
+  </data>
+  <data name="BlocksUsedText" xml:space="preserve">
+    <value>Verwendete Blocks:</value>
+  </data>
+  <data name="BrowseText" xml:space="preserve">
+    <value>_Durchsuchen...</value>
+  </data>
+  <data name="CheckForUpdatesMenuText" xml:space="preserve">
+    <value>Suche nach Updates</value>
+  </data>
+  <data name="ClearText" xml:space="preserve">
+    <value>_Liste leeren</value>
+  </data>
+  <data name="DeleteButtonText" xml:space="preserve">
+    <value>_Löschen</value>
+  </data>
+  <data name="DeleteGameText" xml:space="preserve">
+    <value>_Spiel Löschen</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="donatePayPalSmall" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\..\..\Content\donatePayPalSmallDe.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DownloadCoversFromWebText" xml:space="preserve">
+    <value>Cover aus dem Web herunterladen</value>
+  </data>
+  <data name="DriveLabelText" xml:space="preserve">
+    <value>Laufwerk:</value>
+  </data>
+  <data name="EditLanguageMenuText" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="EditMenuText" xml:space="preserve">
+    <value>_Bearbeiten</value>
+  </data>
+  <data name="EditSetCoverDirText" xml:space="preserve">
+    <value>_Cover-Verzeichnis festlegen...</value>
+  </data>
+  <data name="EditShowCoversText" xml:space="preserve">
+    <value>Cover _anzeigen</value>
+  </data>
+  <data name="ExitMenuText" xml:space="preserve">
+    <value>B_eenden</value>
+  </data>
+  <data name="ExtractMenuText" xml:space="preserve">
+    <value>_ISO extrahieren...</value>
+  </data>
+  <data name="FileMenuText" xml:space="preserve">
+    <value>_Datei</value>
+  </data>
+  <data name="FormatText" xml:space="preserve">
+    <value>Formatieren</value>
+  </data>
+  <data name="FreeSpaceText" xml:space="preserve">
+    <value>Freier Speicher:</value>
+  </data>
+  <data name="GamesOnDriveLabelText" xml:space="preserve">
+    <value>Spiele auf dem WBFS Laufwerk:</value>
+  </data>
+  <data name="GamesToAddLabelText" xml:space="preserve">
+    <value>Hinzuzufügende Spiele:</value>
+  </data>
+  <data name="HelpMenuText" xml:space="preserve">
+    <value>_Hilfe</value>
+  </data>
+  <data name="ItemsText" xml:space="preserve">
+    <value>Objekte:</value>
+  </data>
+  <data name="LoadText" xml:space="preserve">
+    <value>_Laden</value>
+  </data>
+  <data name="MakeAllHBCMenuText" xml:space="preserve">
+    <value>Erstelle HBC _-Einträge für alle</value>
+  </data>
+  <data name="MakeSingleHBCMenuText" xml:space="preserve">
+    <value>_HBC-Eintrag erstellen</value>
+  </data>
+  <data name="RefreshDriveListText" xml:space="preserve">
+    <value>Laufwerksliste aktualisieren</value>
+  </data>
+  <data name="RemoveFromListText" xml:space="preserve">
+    <value>_Von Liste löschen</value>
+  </data>
+  <data name="RenameButtonText" xml:space="preserve">
+    <value>Umbenennen</value>
+  </data>
+  <data name="RenameMenuText" xml:space="preserve">
+    <value>_Umbenennen</value>
+  </data>
+  <data name="SortByIdMenuText" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="SortByIsoLocMenuText" xml:space="preserve">
+    <value>ISO Verzeichnis</value>
+  </data>
+  <data name="SortByLocationMenuText" xml:space="preserve">
+    <value>Platz auf dem Laufwerk</value>
+  </data>
+  <data name="SortByMenuText" xml:space="preserve">
+    <value>Sortieren nach</value>
+  </data>
+  <data name="SortByNameMenuText" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="SortBySizeMenuText" xml:space="preserve">
+    <value>Größe</value>
+  </data>
+  <data name="SortByStatusMenuText" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="TotalSpaceText" xml:space="preserve">
+    <value>Speicherkapazität:</value>
+  </data>
+  <data name="UsedSpaceText" xml:space="preserve">
+    <value>Belegter Speicher:</value>
+  </data>
+  <data name="WBFSDriveMenuText" xml:space="preserve">
+    <value>_WBFS Laufwerk</value>
+  </data>
+  <data name="CloneText" xml:space="preserve">
+    <value>Klonen</value>
+  </data>
+  <data name="DriveToDriveCopyText" xml:space="preserve">
+    <value>Zu diesem Laufwerk kopieren</value>
+  </data>
+  <data name="DriveToDriveText" xml:space="preserve">
+    <value>Laufwerk-zu-Laufwerk</value>
+  </data>
+  <data name="EditShowOptionsText" xml:space="preserve">
+    <value> Optionen…</value>
+  </data>
+  <data name="EstimatedTotalSizeText" xml:space="preserve">
+    <value>Geschätzte Endgröße:</value>
+  </data>
+  <data name="ExportListToFileText" xml:space="preserve">
+    <value>Liste zu Datei exportieren</value>
+  </data>
+  <data name="GamesOnSecondaryText" xml:space="preserve">
+    <value>Spiele auf dem sekundären WBFS Laufwerk:</value>
+  </data>
+  <data name="SelectedItemsText" xml:space="preserve">
+    <value>Ausgewählte Objekte</value>
+  </data>
+  <data name="UnloadText" xml:space="preserve">
+    <value>Auswerfen</value>
+  </data>
+  <data name="CreateChannelsText" xml:space="preserve">
+    <value>Kanäle erstellen</value>
+  </data>
+  <data name="VisitBlogMenuText" xml:space="preserve">
+    <value>Blog ansehen</value>
+  </data>
+  <data name="VisitDownloadMenuText" xml:space="preserve">
+    <value>Download Seite ansehen</value>
+  </data>
+  <data name="LargeCoverViewText" xml:space="preserve">
+    <value>Große Coveransicht</value>
+  </data>
+  <data name="OnlineHelpMenuText" xml:space="preserve">
+    <value>Online Hilfe</value>
+  </data>
+</root>

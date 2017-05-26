@@ -1,0 +1,10 @@
+﻿<Window x:Class="WBFSManager.UpdateViewer"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Update" Height="400" Width="667" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterOwner" Icon="/WBFSManager;component/Content/WBFSManagerNew.png" Loaded="Window_Loaded" SnapsToDevicePixels="True">
+    <DockPanel LastChildFill="True">
+        <TextBlock DockPanel.Dock="Top" HorizontalAlignment="Center" FontSize="15" FontWeight="ExtraBold" Text="{Resx ResxName=WBFSManager.UI.Localization.UpdateViewer.UpdateViewerR, Key=NewUpadateAvailableStr}"></TextBlock>
+        <Frame DockPanel.Dock="Bottom" Name="updateFrame" NavigationUIVisibility="Hidden">
+        </Frame>
+    </DockPanel>
+</Window>
